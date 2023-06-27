@@ -1,0 +1,8 @@
+# CAN Message: ACC1 from universal J1939
+Vehicle.ADAS.CruiseControl.SpeedSet:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ACC1
+    signal: AdaptiveCruiseCtrlSetSpeed
+    interval_ms: 1000
