@@ -1,5 +1,11 @@
 # python3 -m pip install cantools
 # python3 -m pip install vss-tools
+# python3 -m pip install tensorflow --no-cache-dir
+# python3 -m pip install tensorflow_hub
+# python3 -m pip install tensorflow_text
+# python3 -m pip install --upgrade gensim
+# python3 -m pip install -U sentence-transformers
+# python3 -m pip install tensorrt
 # /usr/local/python/3.10.8/lib/python3.10/site-packages/vspec
 # export PYTHONPATH=$PYTHONPATH:/usr/local/python/3.10.8/lib/python3.10/site-packages/
 # export PYTHON_PATH=$PYTHON_PATH:/usr/local/python/3.10.8/lib/python3.10/site-packages/
@@ -10,20 +16,41 @@ import sys
 import numbers
 import decimal
 import itertools
+import os
+import re
+import torch
+logging.info("Importing modules...Tensorflow")
 
+#import tensorflow as tf
+import tensorflow_hub as hub
+#import tensorflow_text as text
+import numpy as np
+
+logging.info("Importing modules...Rest")
+#from gensim import corpora, models, similarities, downloader
 from collections.abc import Iterable
 from collections import defaultdict
 from pprint import pprint
 from dataclasses import dataclass, field
 from functools import total_ordering
-from anytree import PreOrderIter
+from anytree import PreOrderIter, Resolver
 from vspec.model.vsstree import VSSNode
 from vspec.model.constants import VSSTreeType
 from vspec.loggingconfig import initLogging
 from cantools.database import Database, Message, Signal
 
+print("Hello00")
+from sentence_transformers import SentenceTransformer, util
+print("Hello01")
+
 import vspec
 import cantools
+from absl import logging
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
 
 
 @dataclass(eq=False, unsafe_hash=True)
@@ -141,6 +168,217 @@ class Similarity():
         return intersection_cardinality/float(union_cardinality)
 
 
+# module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
+# model = hub.load(module_url)
+# print("module %s loaded" % module_url)
+
+# def embed(input):
+#     return model(input)
+
+def sentence_case(string):
+    if string != '':
+        result = re.sub('([A-Z])', r' \1', string)
+        return result[:1].upper() + result[1:].lower()
+    return
+
+def semantic_similarity(data_base: Database, tree: VSSNode):
+    # word = "Elephant"
+    # sentence = "I am a sentence for which I would like to get its embedding."
+    # paragraph = (
+    #     "Universal Sentence Encoder embeddings also support short paragraphs. "
+    #     "There is no hard limit on how long the paragraph is. Roughly, the longer "
+    #     "the more 'diluted' the embedding will be.")
+    # messages = [word, sentence, paragraph]
+    # # Reduce logging output.
+    # logging.set_verbosity(logging.ERROR)
+    # message_embeddings = embed(messages)
+    # pprint(message_embeddings)
+    # for i, message_embedding in enumerate(np.array(message_embeddings).tolist()):
+    #     print("Message: {}".format(messages[i]))
+    #     print("Embedding size: {}".format(len(message_embedding)))
+    #     message_embedding_snippet = ", ".join(
+    #         (str(x) for x in message_embedding[:3]))
+    #     print("Embedding: [{}, ...]\n".format(message_embedding_snippet))
+
+    # corr = np.inner(np.squeeze(np.asarray(messages)), np.squeeze(np.asarray(message_embeddings)))
+
+    # print(corr)
+    
+    
+    # train_examples = [ 'Mike', 'Michael', 'Markus', 'Thorsten', 'Lydia' ]
+    # train_labels = [ 0,0,0,1,2 ]
+
+    # test_examples = [ 'Maik', 'Torben', 'Larissa' ]
+    # test_labels = [ 0,1,2 ]
+    
+    # hub_layer = hub.KerasLayer("https://tfhub.dev/google/nnlm-en-dim50/2", input_shape=[], dtype=tf.string, trainable=True)
+    # hub_layer(train_examples)
+    # model = tf.keras.Sequential()
+    # model.add(hub_layer)
+    # model.add(tf.keras.layers.Dense(16, activation='relu'))
+    # model.add(tf.keras.layers.Dense(1))
+    # model.summary()
+    # model.compile(optimizer='adam',
+    #           loss=tf.losses.BinaryCrossentropy(from_logits=True),
+    #           metrics=[tf.metrics.BinaryAccuracy(threshold=0.0, name='accuracy')])
+    # x_val = train_examples[:4]
+    # partial_x_train = train_examples[4:]
+    # y_val = train_labels[:4]
+    # partial_y_train = train_labels[4:]
+    # history = model.fit(partial_x_train,
+    #                 partial_y_train,
+    #                 epochs=4,
+    #                 batch_size=8,
+    #                 validation_data=(x_val, y_val),
+    #                 verbose=1)
+    
+    # results = model.evaluate(test_examples, test_labels)
+    # print(results)
+    
+    # ACC1.AdaptiveCruiseCtrlSetSpeed [km/h] 0-250
+    # Text: "Value of the desired (chosen) velocity of the adaptive cruise control system."
+    #
+    # VSS Branch: Vehicle.ADAS.CruiseControl.SpeedSet
+    # Text: "Set cruise control speed in kilometers per hour."
+
+    # dbc_doc = "Value of the desired (chosen) velocity of the adaptive cruise control system."
+    # vss_doc = "Set cruise control speed in kilometers per hour."
+    # corpus = tf.constant([dbc_doc, vss_doc])
+    # hub_url = "https://tfhub.dev/google/sentence-t5/st5-base/1"
+    # encoder = hub.KerasLayer(hub_url)
+    # english_embeds = encoder(corpus)
+    # print (english_embeds)
+
+    # https://huggingface.co/sentence-transformers/sentence-t5-base
+    # https://www.sbert.net/docs/quickstart.html#comparing-sentence-similarities
+    # sentences = [
+    #     "Set cruise control speed in kilometers per hour."
+    #     "Value of the desired (chosen) velocity of the adaptive cruise control system.",
+    #     "The quick brown fox jumps over the fense."
+    # ]
+    #model = SentenceTransformer('sentence-transformers/sentence-t5-base')
+    
+    # https://www.sbert.net/examples/applications/paraphrase-mining/README.html
+    logging.info("Loading SentenceTransformer")
+    print("Hallo")
+    model = SentenceTransformer('all-MiniLM-L6-v2',
+                                device='cpu',
+                                )
+
+    print("Hallo2")
+    
+    # Two lists of sentences - QUERY
+    #sentences1 = 
+
+    # sentences2 = ['The dog plays in the garden',
+    #             'A woman watches TV',
+    #             'The new movie is so great']
+    corpus = []
+    corpus_ids = []
+    corpus_can_messages = []
+    corpus_can_signals = []
+    can_message = data_base.get_message_by_name('ACC1')
+    for can_message in data_base.messages:
+        for can_signal in can_message.signals:
+            print("CAN-Signal: {} : {}".format(can_signal.name, can_signal.comment))
+            signal_name_with_spaces=sentence_case(can_signal.name)
+            corpus.append(str(signal_name_with_spaces) + " " + str(can_signal.comment) + " " + str(can_message.comment) + " in " + str(can_signal.unit))
+            corpus_ids.append(can_message.name + "." + can_signal.name)
+            corpus_can_messages.append(can_message)
+            corpus_can_signals.append(can_signal)
+    corpus_embeddings = model.encode(corpus, convert_to_tensor=True, show_progress_bar=True)
+
+    #Compute embedding for both lists
+    #embeddings1 = model.encode(sentences, convert_to_tensor=True, show_progress_bar=True)
+    #query = ['Set cruise control speed in kilometers per hour.']
+    
+    top_k = min(5, len(corpus))
+    for vss_node in PreOrderIter(tree):
+        query = sentence_case(vss_node.name)
+        query += " " + str(vss_node.description)
+        if vss_node.parent:
+            query += sentence_case(vss_node.parent.name)
+            query += " " + str(vss_node.parent.description)
+        query_embedding = model.encode(query, convert_to_tensor=True)
+        cos_scores = util.cos_sim(query_embedding, corpus_embeddings)[0]
+        
+        good_results = torch.topk(cos_scores, k=top_k)
+        print("======================")
+        print("VSS Datapoint:", vss_node.qualified_name())
+        print("Query Text:", query)
+        print("\nTop 5 best matching CAN Signals:")
+        for score, idx in zip(good_results[0], good_results[1]):
+            print("\tMatch: {:.4f} {} - {}".format(score,corpus_ids[idx],corpus[idx]))
+            # score,corpus[idx], corpus_ids[idx], ": ", corpus[idx], "(Score: {:.4f})".format(score))
+
+    # cosine_scores = util.cos_sim(embeddings1, embeddings2)
+
+    # #Find the pairs with the highest cosine similarity scores
+    # pairs = []
+    # for i in range(len(cosine_scores)-1):
+    #     for j in range(i+1, len(cosine_scores)):
+    #         pairs.append({'index': [i, j], 'score': cosine_scores[i][j]})
+
+    # #Sort scores in decreasing order
+    # pairs = sorted(pairs, key=lambda x: x['score'], reverse=True)
+
+    # for pair in pairs[0:10]:
+    #     i, j = pair['index']
+    #     score=pair['score']
+    #     #print("{} \t\t {} \t\t Score: {:.4f}".format(sentences[i], sentences[j], pair['score']))
+    #     print("==============================")
+    #     print("i={} j={}".format(i,j))
+    #     print("Sentence 1: {}".format(sentences1[i]))
+    #     print("Sentence 2: {}".format(sentences2[j]))
+    #     print("Score: {:.4f}".format(score))
+    
+    #Output the pairs with their score
+    # for i in range(len(sentences1)):
+    #     score=cosine_scores[i][i]
+    #     print("==============================")
+    #     print("i={}".format(i))
+    #     print("Sentence 1: {}".format(sentences1[i]))
+    #     print("Sentence 2: {}".format(sentences2[i]))
+    #     print("Score: {:.4f}".format(score))
+        #print("{} \t\t {} \t\t Score: {:.4f}".format(sentences1[i], sentences2[i], cosine_scores[i][i]))
+    
+    # paraphrases = util.paraphrase_mining(model,
+    #                                      sentences,
+    #                                      max_pairs=10,
+    #                                      top_k=3,
+    #                                      show_progress_bar=True)
+    
+    # print("\n\n\n")
+    # for paraphrase in paraphrases[0:10]:
+    #     score, i, j = paraphrase
+    #     print("==============================")
+    #     print("i={} j={}".format(i,j))
+    #     print("Sentence i: {}".format(sentences[i]))
+    #     print("Sentence j: {}".format(sentences[j]))
+    #     print("Score: {:.4f}".format(score))
+        #print("{} \t\t {} \t\t Score: {:.4f}".format(sentences[i], sentences[j], score))
+    
+    # embeddings = model.encode(sentences)
+    # print("Embeddings:", embeddings)
+    
+    #Compute cosine similarity between all pairs
+    # cos_sim = util.cos_sim(embeddings, embeddings)
+    # print("Cosine-Similarity:", cos_sim)
+    
+    #Add all pairs to a list with their cosine similarity score
+    # all_sentence_combinations = []
+    # for i in range(len(cos_sim)-1):
+    #     for j in range(i+1, len(cos_sim)):
+    #         all_sentence_combinations.append([cos_sim[i][j], i, j])
+
+    #Sort list by the highest cosine similarity score
+#    all_sentence_combinations = sorted(all_sentence_combinations, key=lambda x: x[0], reverse=True)
+
+    # print("Top-5 most similar pairs:")
+    # for score, i, j in all_sentence_combinations[0:5]:
+    #     print("{} \t {} \t {:.4f}".format(sentences[i], sentences[j], cos_sim[i][j]))
+
+
 def correlate_vss_dbc(data_base: Database,
                       tree: VSSNode,
                       data_type_tree: VSSNode):
@@ -154,12 +392,13 @@ def correlate_vss_dbc(data_base: Database,
             for can_signal in can_message.signals[:10]:
                 similar = Similarity(can_message, can_signal, vss_signal)
                 if (similar.total_similarity() > threshold):
-                    #logging.info("Found match for: %s %f", vss_signal.qualified_name(), similar.total_similarity())
+                    # logging.info("Found match for: %s %f", vss_signal.qualified_name(), similar.total_similarity())
                     matches[vss_signal].add(similar)
         okay_matches = sorted(
             matches[vss_signal], key=lambda x: x.total_similarity())[:1]
         if okay_matches:
-            logging.info("========================================================")
+            logging.info(
+                "========================================================")
             logging.info("%s", vss_signal.qualified_name())
             for okay_match in okay_matches:
                 logging.info(" Match: %s.%s %f",
@@ -168,8 +407,8 @@ def correlate_vss_dbc(data_base: Database,
                              okay_match.total_similarity())
                 dump_similarity(okay_match)
 
-    #logging.info("Number of VSS signals with matches above threshold: %d", len(matches))
-    #logging.info("Printing Top-10")
+    # logging.info("Number of VSS signals with matches above threshold: %d", len(matches))
+    # logging.info("Printing Top-10")
     # top10 = sorted(matches, reverse=True)[:10]
     # for element in top10:
     #     logging.info("%s = %f",
@@ -399,9 +638,11 @@ def main(arguments):
         logging.info("Loading DBC...")
         dbc = load_dbc('j1939.dbc')
 
-        print_dummy_dbc(dbc, 'ACC1', 'AdaptiveCruiseCtrlSetSpeed')
+        #print_dummy_dbc(dbc, 'ACC1', 'AdaptiveCruiseCtrlSetSpeed')
 
-        correlate_vss_dbc(dbc, tree, data_type_tree)
+        # correlate_vss_dbc(dbc, tree, data_type_tree)
+
+        semantic_similarity(dbc, tree)
 
     except vspec.VSpecError as exception:
         logging.error("Error during processing of VSpec: %s", exception)
