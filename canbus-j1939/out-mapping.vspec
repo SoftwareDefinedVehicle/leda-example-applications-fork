@@ -1,0 +1,8397 @@
+Vehicle.VersionVSS.Major:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3567
+Vehicle.VersionVSS.Minor:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3523
+Vehicle.VersionVSS.Patch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3097
+Vehicle.VersionVSS.Label:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3426
+Vehicle.VehicleIdentification.VIN:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.5013
+Vehicle.VehicleIdentification.WMI:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreWheelIdentification1
+    metadata:
+      matching:
+        score: 0.5033
+Vehicle.VehicleIdentification.Brand:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.4754
+Vehicle.VehicleIdentification.Model:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.5476
+Vehicle.VehicleIdentification.Year:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.5238
+Vehicle.VehicleIdentification.AcrissCode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: PMI
+    signal: DataDictionaryMethod
+    metadata:
+      matching:
+        score: 0.3958
+Vehicle.VehicleIdentification.BodyType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS11
+    signal: VehicleType
+    metadata:
+      matching:
+        score: 0.5196
+Vehicle.VehicleIdentification.DateVehicleFirstRegistered:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.5492
+Vehicle.VehicleIdentification.LicensePlate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.4897
+Vehicle.VehicleIdentification.MeetsEmissionStandard:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM33
+    signal: AECDNumber1
+    metadata:
+      matching:
+        score: 0.4474
+Vehicle.VehicleIdentification.ProductionDate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS11
+    signal: VehicleType
+    metadata:
+      matching:
+        score: 0.4552
+Vehicle.VehicleIdentification.PurchaseDate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.4562
+Vehicle.VehicleIdentification.VehicleModelDate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS11
+    signal: VehicleType
+    metadata:
+      matching:
+        score: 0.4837
+Vehicle.VehicleIdentification.VehicleConfiguration:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AI
+    signal: DriveAxleLocation
+    metadata:
+      matching:
+        score: 0.5128
+Vehicle.VehicleIdentification.VehicleSeatingCapacity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VH
+    signal: TotalVehicleHours
+    metadata:
+      matching:
+        score: 0.4318
+Vehicle.VehicleIdentification.VehicleSpecialUsage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: VehicleUseStatus
+    metadata:
+      matching:
+        score: 0.5495
+Vehicle.VehicleIdentification.VehicleExteriorColor:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.4510
+Vehicle.VehicleIdentification.VehicleInteriorColor:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.4469
+Vehicle.VehicleIdentification.VehicleInteriorType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS11
+    signal: VehicleType
+    metadata:
+      matching:
+        score: 0.4343
+Vehicle.VehicleIdentification.KnownVehicleDamages:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VI
+    signal: VehicleIdentificationNumber
+    metadata:
+      matching:
+        score: 0.3762
+Vehicle.VehicleIdentification.OptionalExtras:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS23
+    signal: BrakeLiningSufficient
+    metadata:
+      matching:
+        score: 0.3614
+Vehicle.LowVoltageSystemState:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD2
+    signal: VhicleBatteryVoltageLowLampData
+    metadata:
+      matching:
+        score: 0.5417
+Vehicle.LowVoltageBattery.NominalVoltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCC2
+    signal: VehicleBatteryVoltageLowLampCmd
+    metadata:
+      matching:
+        score: 0.5344
+Vehicle.LowVoltageBattery.NominalCapacity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP2
+    signal: BatteryPotential_PowerInput2
+    metadata:
+      matching:
+        score: 0.4828
+Vehicle.LowVoltageBattery.CurrentVoltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.5132
+Vehicle.LowVoltageBattery.CurrentCurrent:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.5482
+Vehicle.Speed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: TachographVehicleSpeed
+    metadata:
+      matching:
+        score: 0.6202
+Vehicle.TraveledDistance:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TDI
+    signal: TripDistanceInTopGear
+    metadata:
+      matching:
+        score: 0.6415
+Vehicle.TraveledDistanceSinceStart:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TDI
+    signal: TripDistanceInTopGear
+    metadata:
+      matching:
+        score: 0.6803
+Vehicle.StartTime:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TTI1
+    signal: TripTimeInTopGear
+    metadata:
+      matching:
+        score: 0.5466
+Vehicle.TripDuration:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDHR
+    signal: HighResolutionTripDistance
+    metadata:
+      matching:
+        score: 0.6402
+Vehicle.TripMeterReading:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDHR
+    signal: HighResolutionTripDistance
+    metadata:
+      matching:
+        score: 0.5632
+Vehicle.IsBrokenDown:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM36
+    signal: VehicleContinuousMalfunctionInd
+    metadata:
+      matching:
+        score: 0.4448
+Vehicle.IsMoving:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: VehicleMotion
+    metadata:
+      matching:
+        score: 0.6050
+Vehicle.AverageSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GFI1
+    signal: TripAverageFuelRate
+    metadata:
+      matching:
+        score: 0.5782
+Vehicle.Acceleration.Longitudinal:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AccelerationSensor
+    signal: LongitudinalAccelerationExRange
+    metadata:
+      matching:
+        score: 0.6842
+Vehicle.Acceleration.Lateral:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AccelerationSensor
+    signal: LateralAccelerationExRange
+    metadata:
+      matching:
+        score: 0.6489
+Vehicle.Acceleration.Vertical:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AccelerationSensor
+    signal: VerticalAccelerationExRange
+    metadata:
+      matching:
+        score: 0.6425
+Vehicle.AngularVelocity.Roll:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDS2
+    signal: VehicleRoll
+    metadata:
+      matching:
+        score: 0.6742
+Vehicle.AngularVelocity.Pitch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDC2
+    signal: YawRate
+    metadata:
+      matching:
+        score: 0.6427
+Vehicle.AngularVelocity.Yaw:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDC2
+    signal: YawRate
+    metadata:
+      matching:
+        score: 0.7842
+Vehicle.RoofLoad:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS22
+    signal: AxleLoadSum
+    metadata:
+      matching:
+        score: 0.5475
+Vehicle.CargoVolume:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DD
+    signal: FuelLevel1
+    metadata:
+      matching:
+        score: 0.5130
+Vehicle.EmissionsCO2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD2
+    signal: VhicleHVACRecirculationLampData
+    metadata:
+      matching:
+        score: 0.4831
+Vehicle.CurrentOverallWeight:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EPD
+    signal: PayloadPercentage
+    metadata:
+      matching:
+        score: 0.5703
+Vehicle.CurbWeight:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VW
+    signal: AxleLocation
+    metadata:
+      matching:
+        score: 0.5148
+Vehicle.GrossWeight:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CVW
+    signal: GrossCombinationVehicleWeight
+    metadata:
+      matching:
+        score: 0.6606
+Vehicle.MaxTowWeight:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VW
+    signal: TrailerWeight_00
+    metadata:
+      matching:
+        score: 0.6095
+Vehicle.MaxTowBallWeight:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM12
+    signal: MaxVehicleSpeedLimit
+    metadata:
+      matching:
+        score: 0.5650
+Vehicle.Length:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR3
+    signal: VehicleID
+    metadata:
+      matching:
+        score: 0.5615
+Vehicle.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE22
+    signal: RelVehBodyLevelFrontAxle
+    metadata:
+      matching:
+        score: 0.5724
+Vehicle.Width:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LD
+    signal: TractorClearanceLight
+    metadata:
+      matching:
+        score: 0.5431
+Vehicle.Trailer.IsConnected:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerInteriorLight
+    metadata:
+      matching:
+        score: 0.5994
+Vehicle.CurrentLocation.Timestamp:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Longitude
+    metadata:
+      matching:
+        score: 0.5389
+Vehicle.CurrentLocation.Latitude:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Latitude
+    metadata:
+      matching:
+        score: 0.6731
+Vehicle.CurrentLocation.Longitude:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Longitude
+    metadata:
+      matching:
+        score: 0.6445
+Vehicle.CurrentLocation.Heading:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Latitude
+    metadata:
+      matching:
+        score: 0.6632
+Vehicle.CurrentLocation.HorizontalAccuracy:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Latitude
+    metadata:
+      matching:
+        score: 0.6873
+Vehicle.CurrentLocation.Altitude:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AccelerationSensor
+    signal: VerticalAccelerationExRange
+    metadata:
+      matching:
+        score: 0.5120
+Vehicle.CurrentLocation.VerticalAccuracy:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDS
+    signal: Altitude
+    metadata:
+      matching:
+        score: 0.6271
+Vehicle.CurrentLocation.GNSSReceiver.FixType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM22
+    signal: ODDStatus
+    metadata:
+      matching:
+        score: 0.4417
+Vehicle.CurrentLocation.GNSSReceiver.MountingPosition.X:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE21
+    signal: LiftAxle1Pos
+    metadata:
+      matching:
+        score: 0.4967
+Vehicle.CurrentLocation.GNSSReceiver.MountingPosition.Y:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SSI2
+    signal: PitchAngleExRange
+    metadata:
+      matching:
+        score: 0.4986
+Vehicle.CurrentLocation.GNSSReceiver.MountingPosition.Z:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE21
+    signal: LiftAxle1Pos
+    metadata:
+      matching:
+        score: 0.5144
+Vehicle.PowerOptimizeLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE21
+    signal: LevelControl
+    metadata:
+      matching:
+        score: 0.4832
+Vehicle.Powertrain.AccumulatedBrakingEnergy:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EI
+    signal: InstantaneousEstBrakePower
+    metadata:
+      matching:
+        score: 0.5826
+Vehicle.Powertrain.Range:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC2
+    signal: TransCurrentRange
+    metadata:
+      matching:
+        score: 0.5368
+Vehicle.Powertrain.TimeRemaining:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VH
+    signal: TotalPowerTakeoffHours
+    metadata:
+      matching:
+        score: 0.5845
+Vehicle.Powertrain.Type:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESC1
+    signal: SteerType
+    metadata:
+      matching:
+        score: 0.5123
+Vehicle.Powertrain.PowerOptimizeLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE21
+    signal: LevelControl
+    metadata:
+      matching:
+        score: 0.4616
+Vehicle.Powertrain.CombustionEngine.EngineCode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EOI
+    signal: EngOperatingState
+    metadata:
+      matching:
+        score: 0.5286
+Vehicle.Powertrain.CombustionEngine.Displacement:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CBI
+    signal: TotalCompressionBrakeDistance
+    metadata:
+      matching:
+        score: 0.5032
+Vehicle.Powertrain.CombustionEngine.StrokeLength:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CT6
+    signal: EngAverageCombustionTime
+    metadata:
+      matching:
+        score: 0.4981
+Vehicle.Powertrain.CombustionEngine.Bore:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CT6
+    signal: EngAverageCombustionTime
+    metadata:
+      matching:
+        score: 0.5018
+Vehicle.Powertrain.CombustionEngine.Configuration:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EOI
+    signal: EngOperatingState
+    metadata:
+      matching:
+        score: 0.5510
+Vehicle.Powertrain.CombustionEngine.NumberOfCylinders:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCS
+    signal: EngCyl14CombustionStatus
+    metadata:
+      matching:
+        score: 0.5225
+Vehicle.Powertrain.CombustionEngine.NumberOfValvesPerCylinder:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EngFelThrottleValveInformation
+    signal: EngFuelValve1OperationStatus
+    metadata:
+      matching:
+        score: 0.5034
+Vehicle.Powertrain.CombustionEngine.CompressionRatio:
+  type: sensor
+  datatype: float
+  dbc:
+    message: KL2
+    signal: EngCyl9KnockLevel
+    metadata:
+      matching:
+        score: 0.5849
+Vehicle.Powertrain.CombustionEngine.EngineOilCapacity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFC
+    signal: EngTotalFuelUsed
+    metadata:
+      matching:
+        score: 0.5728
+Vehicle.Powertrain.CombustionEngine.EngineCoolantCapacity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EFL_P1
+    signal: EngCoolantLevel
+    metadata:
+      matching:
+        score: 0.5694
+Vehicle.Powertrain.CombustionEngine.MaxPower:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC4
+    signal: EngRatedPower
+    metadata:
+      matching:
+        score: 0.5114
+Vehicle.Powertrain.CombustionEngine.MaxTorque:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETH
+    signal: EngPeakTorque1
+    metadata:
+      matching:
+        score: 0.6005
+Vehicle.Powertrain.CombustionEngine.AspirationType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCI2
+    signal: EngTurbo1CompressorIntakeTemp
+    metadata:
+      matching:
+        score: 0.4614
+Vehicle.Powertrain.CombustionEngine.EngineOilLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EFL_P1
+    signal: EngOilPress
+    metadata:
+      matching:
+        score: 0.5576
+Vehicle.Powertrain.CombustionEngine.OilLifeRemaining:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TRF2
+    signal: TransOilLifeRemaining
+    metadata:
+      matching:
+        score: 0.5294
+Vehicle.Powertrain.CombustionEngine.IsRunning:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SHUTDN
+    signal: EngPrtctnSystmHasShutdownEngine
+    metadata:
+      matching:
+        score: 0.4737
+Vehicle.Powertrain.CombustionEngine.Speed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESSI
+    signal: EngSpeed1
+    metadata:
+      matching:
+        score: 0.7460
+Vehicle.Powertrain.CombustionEngine.EngineHours:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TTI2
+    signal: TripEngRunningTime
+    metadata:
+      matching:
+        score: 0.6279
+Vehicle.Powertrain.CombustionEngine.IdleHours:
+  type: sensor
+  datatype: float
+  dbc:
+    message: IO
+    signal: EngTotalIdleHours
+    metadata:
+      matching:
+        score: 0.6436
+Vehicle.Powertrain.CombustionEngine.ECT:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ET2
+    signal: EngECUTemp
+    metadata:
+      matching:
+        score: 0.6678
+Vehicle.Powertrain.CombustionEngine.EOT:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ET2
+    signal: EngECUTemp
+    metadata:
+      matching:
+        score: 0.6647
+Vehicle.Powertrain.CombustionEngine.MAP:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC7
+    signal: CmdedEngIntakeManifoldPress
+    metadata:
+      matching:
+        score: 0.6011
+Vehicle.Powertrain.CombustionEngine.MAF:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EC1
+    signal: EngMomentOfInertia
+    metadata:
+      matching:
+        score: 0.5399
+Vehicle.Powertrain.CombustionEngine.TPS:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EngFelThrottleValveInformation
+    signal: EngDesiredThrottleValve1Pos
+    metadata:
+      matching:
+        score: 0.5774
+Vehicle.Powertrain.CombustionEngine.EOP:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EFL_P1
+    signal: EngOilPress
+    metadata:
+      matching:
+        score: 0.6147
+Vehicle.Powertrain.CombustionEngine.Power:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETH
+    signal: EngPower
+    metadata:
+      matching:
+        score: 0.5245
+Vehicle.Powertrain.CombustionEngine.Torque:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETH
+    signal: NumberOfEngTorqueHistoryRecords
+    metadata:
+      matching:
+        score: 0.6226
+Vehicle.Powertrain.CombustionEngine.DieselExhaustFluid.Capacity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFC
+    signal: EngTotalFuelUsed
+    metadata:
+      matching:
+        score: 0.4800
+Vehicle.Powertrain.CombustionEngine.DieselExhaustFluid.Level:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VF
+    signal: HydOilLevel
+    metadata:
+      matching:
+        score: 0.5821
+Vehicle.Powertrain.CombustionEngine.DieselExhaustFluid.Range:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SCR1
+    signal: Aftrtrtmnt1DslExhstFldTnkLwLvlIndctrTrvldDstnc
+    metadata:
+      matching:
+        score: 0.4740
+Vehicle.Powertrain.CombustionEngine.DieselExhaustFluid.IsLevelLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC1
+    signal: BelowNominalLevelRearAxle
+    metadata:
+      matching:
+        score: 0.5190
+Vehicle.Powertrain.CombustionEngine.DieselParticulateFilter.InletTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1IG2
+    signal: Aftrtrtmnt1DslPrtcltFltrIntkGsTmp
+    metadata:
+      matching:
+        score: 0.7059
+Vehicle.Powertrain.CombustionEngine.DieselParticulateFilter.OutletTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1IG2
+    signal: Aftrtrtmnt1DslPrtcltFltrIntkGsTmp
+    metadata:
+      matching:
+        score: 0.6199
+Vehicle.Powertrain.CombustionEngine.DieselParticulateFilter.DeltaPressure:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DPFC1
+    signal: DieselParticulateFilterStatus
+    metadata:
+      matching:
+        score: 0.6517
+Vehicle.Powertrain.Transmission.Type:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC1
+    signal: TransInputShaftSpeed
+    metadata:
+      matching:
+        score: 0.5173
+Vehicle.Powertrain.Transmission.GearCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCFG
+    signal: NumberOfReverseGearRatios
+    metadata:
+      matching:
+        score: 0.5829
+Vehicle.Powertrain.Transmission.DriveType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC1
+    signal: TransDrivelineEngaged
+    metadata:
+      matching:
+        score: 0.5124
+Vehicle.Powertrain.Transmission.TravelledDistance:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TDI
+    signal: TripGearDownDistance
+    metadata:
+      matching:
+        score: 0.5593
+Vehicle.Powertrain.Transmission.CurrentGear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC2
+    signal: TransCurrentGear
+    metadata:
+      matching:
+        score: 0.6822
+Vehicle.Powertrain.Transmission.SelectedGear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC2
+    signal: TransSelectedGear
+    metadata:
+      matching:
+        score: 0.6399
+Vehicle.Powertrain.Transmission.IsParkLockEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TC1
+    signal: DisengageDiffLockRqFrontAxle1
+    metadata:
+      matching:
+        score: 0.5683
+Vehicle.Powertrain.Transmission.IsLowRangeEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC3
+    signal: TransRangeLowActuator
+    metadata:
+      matching:
+        score: 0.5813
+Vehicle.Powertrain.Transmission.IsElectricalPowertrainEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC1
+    signal: TransDrivelineEngaged
+    metadata:
+      matching:
+        score: 0.5766
+Vehicle.Powertrain.Transmission.PerformanceMode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC6
+    signal: RecommendedGear
+    metadata:
+      matching:
+        score: 0.6126
+Vehicle.Powertrain.Transmission.GearChangeMode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC2
+    signal: TransSelectedGear
+    metadata:
+      matching:
+        score: 0.6411
+Vehicle.Powertrain.Transmission.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AI
+    signal: DriveAxleTemp
+    metadata:
+      matching:
+        score: 0.5781
+Vehicle.Powertrain.Transmission.ClutchEngagement:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC6
+    signal: ClutchLifeRemaining
+    metadata:
+      matching:
+        score: 0.6157
+Vehicle.Powertrain.Transmission.ClutchWear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC6
+    signal: ClutchLifeRemaining
+    metadata:
+      matching:
+        score: 0.6158
+Vehicle.Powertrain.Transmission.DiffLockFrontEngagement:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TC1
+    signal: DisengageDiffLockRqFrontAxle1
+    metadata:
+      matching:
+        score: 0.5996
+Vehicle.Powertrain.Transmission.DiffLockRearEngagement:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TC1
+    signal: DisengageDiffLockRqRearAxle1
+    metadata:
+      matching:
+        score: 0.6165
+Vehicle.Powertrain.Transmission.TorqueDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RC
+    signal: PercentTorqueAtPoint4
+    metadata:
+      matching:
+        score: 0.6012
+Vehicle.Powertrain.ElectricMotor.EngineCode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EOI
+    signal: EngOperatingState
+    metadata:
+      matching:
+        score: 0.5516
+Vehicle.Powertrain.ElectricMotor.MaxPower:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC4
+    signal: EngRatedPower
+    metadata:
+      matching:
+        score: 0.5246
+Vehicle.Powertrain.ElectricMotor.MaxTorque:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETH
+    signal: EngPeakTorque1
+    metadata:
+      matching:
+        score: 0.5507
+Vehicle.Powertrain.ElectricMotor.MaxRegenPower:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC4
+    signal: EngRatedPower
+    metadata:
+      matching:
+        score: 0.6585
+Vehicle.Powertrain.ElectricMotor.MaxRegenTorque:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC4
+    signal: EngRatedPower
+    metadata:
+      matching:
+        score: 0.5635
+Vehicle.Powertrain.ElectricMotor.Speed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESSI
+    signal: EngSpeed1
+    metadata:
+      matching:
+        score: 0.5422
+Vehicle.Powertrain.ElectricMotor.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ET2
+    signal: EngECUTemp
+    metadata:
+      matching:
+        score: 0.6656
+Vehicle.Powertrain.ElectricMotor.CoolantTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: EngCoolantTempHighLampData
+    metadata:
+      matching:
+        score: 0.6332
+Vehicle.Powertrain.ElectricMotor.Power:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP3
+    signal: AltCurrentHiRes
+    metadata:
+      matching:
+        score: 0.5703
+Vehicle.Powertrain.ElectricMotor.Torque:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC1
+    signal: EngTorqueMode
+    metadata:
+      matching:
+        score: 0.6180
+Vehicle.Powertrain.TractionBattery.Id:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreWheelIdentification1
+    metadata:
+      matching:
+        score: 0.5340
+Vehicle.Powertrain.TractionBattery.ProductionDate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETH
+    signal: CalibRecordStartMonth
+    metadata:
+      matching:
+        score: 0.4240
+Vehicle.Powertrain.TractionBattery.ErrorCodes:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: ActiveTroubleCodes
+    metadata:
+      matching:
+        score: 0.5155
+Vehicle.Powertrain.TractionBattery.IsPowerConnected:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreModulePowerSupply
+    metadata:
+      matching:
+        score: 0.5011
+Vehicle.Powertrain.TractionBattery.IsGroundConnected:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE21
+    signal: TractionHelp
+    metadata:
+      matching:
+        score: 0.4474
+Vehicle.Powertrain.TractionBattery.Temperature.Average:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BT1
+    signal: Battery1Temp
+    metadata:
+      matching:
+        score: 0.6264
+Vehicle.Powertrain.TractionBattery.Temperature.Min:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BT1
+    signal: Battery1Temp
+    metadata:
+      matching:
+        score: 0.6607
+Vehicle.Powertrain.TractionBattery.Temperature.Max:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BT1
+    signal: Battery1Temp
+    metadata:
+      matching:
+        score: 0.6089
+Vehicle.Powertrain.TractionBattery.Temperature.CellTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BT1
+    signal: Battery1Temp
+    metadata:
+      matching:
+        score: 0.5005
+Vehicle.Powertrain.TractionBattery.CellVoltage.Min:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1OutputVoltage
+    metadata:
+      matching:
+        score: 0.5575
+Vehicle.Powertrain.TractionBattery.CellVoltage.IdMin:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: BatteryPotential_PowerInput1
+    metadata:
+      matching:
+        score: 0.5423
+Vehicle.Powertrain.TractionBattery.CellVoltage.Max:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1OutputVoltage
+    metadata:
+      matching:
+        score: 0.5213
+Vehicle.Powertrain.TractionBattery.CellVoltage.IdMax:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1OutputVoltage
+    metadata:
+      matching:
+        score: 0.4983
+Vehicle.Powertrain.TractionBattery.CellVoltage.CellVoltages:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1OutputVoltage
+    metadata:
+      matching:
+        score: 0.4693
+Vehicle.Powertrain.TractionBattery.GrossCapacity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EPD
+    signal: PayloadPercentage
+    metadata:
+      matching:
+        score: 0.4136
+Vehicle.Powertrain.TractionBattery.NetCapacity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.4651
+Vehicle.Powertrain.TractionBattery.StateOfHealth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BM
+    signal: BatteryMainSwitchHoldState
+    metadata:
+      matching:
+        score: 0.4292
+Vehicle.Powertrain.TractionBattery.StateOfCharge.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: ChargingSystemPotential
+    metadata:
+      matching:
+        score: 0.5038
+Vehicle.Powertrain.TractionBattery.StateOfCharge.Displayed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1State
+    metadata:
+      matching:
+        score: 0.5374
+Vehicle.Powertrain.TractionBattery.StateOfCharge.CurrentEnergy:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: ChargingSystemPotential
+    metadata:
+      matching:
+        score: 0.5588
+Vehicle.Powertrain.TractionBattery.NominalVoltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1OutputVoltage
+    metadata:
+      matching:
+        score: 0.5396
+Vehicle.Powertrain.TractionBattery.MaxVoltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: BatteryPotential_PowerInput1
+    metadata:
+      matching:
+        score: 0.4620
+Vehicle.Powertrain.TractionBattery.CurrentVoltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: AltCurrent
+    metadata:
+      matching:
+        score: 0.5062
+Vehicle.Powertrain.TractionBattery.CurrentCurrent:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.6205
+Vehicle.Powertrain.TractionBattery.CurrentPower:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.6445
+Vehicle.Powertrain.TractionBattery.AccumulatedChargedEnergy:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP4
+    signal: HybrdBatteryPackRemainingCharge
+    metadata:
+      matching:
+        score: 0.4656
+Vehicle.Powertrain.TractionBattery.AccumulatedConsumedEnergy:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VH
+    signal: TotalPowerTakeoffHours
+    metadata:
+      matching:
+        score: 0.5119
+Vehicle.Powertrain.TractionBattery.AccumulatedChargedThroughput:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP4
+    signal: HybrdBatteryPackRemainingCharge
+    metadata:
+      matching:
+        score: 0.4214
+Vehicle.Powertrain.TractionBattery.AccumulatedConsumedThroughput:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VH
+    signal: TotalPowerTakeoffHours
+    metadata:
+      matching:
+        score: 0.4505
+Vehicle.Powertrain.TractionBattery.PowerLoss:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.4356
+Vehicle.Powertrain.TractionBattery.Range:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC2
+    signal: TransCurrentRange
+    metadata:
+      matching:
+        score: 0.5038
+Vehicle.Powertrain.TractionBattery.TimeRemaining:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VH
+    signal: TotalPowerTakeoffHours
+    metadata:
+      matching:
+        score: 0.5283
+Vehicle.Powertrain.TractionBattery.Charging.ChargeLimit:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1State
+    metadata:
+      matching:
+        score: 0.5263
+Vehicle.Powertrain.TractionBattery.Charging.MaximumChargingCurrent.DC:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH2
+    signal: BatteryCharger2OutputCurrent
+    metadata:
+      matching:
+        score: 0.4590
+Vehicle.Powertrain.TractionBattery.Charging.MaximumChargingCurrent.Phase1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UPAAC
+    signal: UtilityPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.5925
+Vehicle.Powertrain.TractionBattery.Charging.MaximumChargingCurrent.Phase2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UPAAC
+    signal: UtilityPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.5395
+Vehicle.Powertrain.TractionBattery.Charging.MaximumChargingCurrent.Phase3:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UPAAC
+    signal: UtilityPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.5305
+Vehicle.Powertrain.TractionBattery.Charging.ChargePortFlap:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1State
+    metadata:
+      matching:
+        score: 0.4046
+Vehicle.Powertrain.TractionBattery.Charging.IsChargePortFlapOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BM
+    signal: BatteryMainSwitchHoldState
+    metadata:
+      matching:
+        score: 0.4095
+Vehicle.Powertrain.TractionBattery.Charging.IsChargingCableConnected:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1PowerLineState
+    metadata:
+      matching:
+        score: 0.4816
+Vehicle.Powertrain.TractionBattery.Charging.IsChargingCableLocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: ChargingSystemPotential
+    metadata:
+      matching:
+        score: 0.3777
+Vehicle.Powertrain.TractionBattery.Charging.ChargePlugType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH2
+    signal: BatteryCharger2PowerLineState
+    metadata:
+      matching:
+        score: 0.3782
+Vehicle.Powertrain.TractionBattery.Charging.ChargePortType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH2
+    signal: BatteryCharger2PowerLineState
+    metadata:
+      matching:
+        score: 0.3894
+Vehicle.Powertrain.TractionBattery.Charging.ChargePortPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: ChargingSystemPotential
+    metadata:
+      matching:
+        score: 0.4879
+Vehicle.Powertrain.TractionBattery.Charging.Mode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH2
+    signal: BatteryCharger2State
+    metadata:
+      matching:
+        score: 0.5002
+Vehicle.Powertrain.TractionBattery.Charging.IsCharging:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: ChargingSystemPotential
+    metadata:
+      matching:
+        score: 0.4052
+Vehicle.Powertrain.TractionBattery.Charging.IsDischarging:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.4022
+Vehicle.Powertrain.TractionBattery.Charging.StartStopCharging:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1State
+    metadata:
+      matching:
+        score: 0.4406
+Vehicle.Powertrain.TractionBattery.Charging.ChargeCurrent.DC:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.5405
+Vehicle.Powertrain.TractionBattery.Charging.ChargeCurrent.Phase1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UPAAC
+    signal: UtilityPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.6603
+Vehicle.Powertrain.TractionBattery.Charging.ChargeCurrent.Phase2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UPAAC
+    signal: UtilityPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.6160
+Vehicle.Powertrain.TractionBattery.Charging.ChargeCurrent.Phase3:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UPAAC
+    signal: UtilityPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.5943
+Vehicle.Powertrain.TractionBattery.Charging.ChargeVoltage.DC:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: ChargingSystemPotential
+    metadata:
+      matching:
+        score: 0.5220
+Vehicle.Powertrain.TractionBattery.Charging.ChargeVoltage.Phase1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UPAAC
+    signal: UtilityPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.6311
+Vehicle.Powertrain.TractionBattery.Charging.ChargeVoltage.Phase2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPAAC
+    signal: GeneratorPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.5903
+Vehicle.Powertrain.TractionBattery.Charging.ChargeVoltage.Phase3:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UPAAC
+    signal: UtilityPhaseAACRMSCurrent
+    metadata:
+      matching:
+        score: 0.5781
+Vehicle.Powertrain.TractionBattery.Charging.AveragePower:
+  type: sensor
+  datatype: float
+  dbc:
+    message: UAAC
+    signal: UtilityAverageACRMSCurrent
+    metadata:
+      matching:
+        score: 0.5197
+Vehicle.Powertrain.TractionBattery.Charging.MaxPower:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH2
+    signal: BatteryCharger2OutputCurrent
+    metadata:
+      matching:
+        score: 0.4818
+Vehicle.Powertrain.TractionBattery.Charging.EvseId:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP4
+    signal: HybrdBatteryPackRemainingCharge
+    metadata:
+      matching:
+        score: 0.5332
+Vehicle.Powertrain.TractionBattery.Charging.Location.Latitude:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Latitude
+    metadata:
+      matching:
+        score: 0.5322
+Vehicle.Powertrain.TractionBattery.Charging.Location.Longitude:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Longitude
+    metadata:
+      matching:
+        score: 0.4903
+Vehicle.Powertrain.TractionBattery.Charging.Location.Altitude:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDS
+    signal: Altitude
+    metadata:
+      matching:
+        score: 0.4603
+Vehicle.Powertrain.TractionBattery.Charging.PowerLoss:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP1
+    signal: NetBatteryCurrent
+    metadata:
+      matching:
+        score: 0.4148
+Vehicle.Powertrain.TractionBattery.Charging.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BT1
+    signal: Battery1Temp
+    metadata:
+      matching:
+        score: 0.5183
+Vehicle.Powertrain.TractionBattery.Charging.ChargeRate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BCH1
+    signal: BatteryCharger1OutputCurrent
+    metadata:
+      matching:
+        score: 0.4842
+Vehicle.Powertrain.TractionBattery.Charging.TimeToComplete:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TTI2
+    signal: TripAirCompressorOnTime
+    metadata:
+      matching:
+        score: 0.3766
+Vehicle.Powertrain.TractionBattery.Charging.Timer.Mode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TTI1
+    signal: TripTimeInTopGear
+    metadata:
+      matching:
+        score: 0.4362
+Vehicle.Powertrain.TractionBattery.Charging.Timer.Time:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TTI2
+    signal: TripCruiseTime
+    metadata:
+      matching:
+        score: 0.4690
+Vehicle.Powertrain.TractionBattery.DCDC.PowerLoss:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LVDS
+    signal: LowVoltageDisconnectTemp
+    metadata:
+      matching:
+        score: 0.4347
+Vehicle.Powertrain.TractionBattery.DCDC.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BT1
+    signal: Battery1Temp
+    metadata:
+      matching:
+        score: 0.5246
+Vehicle.Powertrain.FuelSystem.SupportedFuelTypes:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD2
+    signal: VehicleFuelLevelLowLampData
+    metadata:
+      matching:
+        score: 0.5357
+Vehicle.Powertrain.FuelSystem.SupportedFuel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFI
+    signal: FlexibleFuelPercentage
+    metadata:
+      matching:
+        score: 0.4807
+Vehicle.Powertrain.FuelSystem.HybridType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GFI1
+    signal: EngFuelSpecificGravity
+    metadata:
+      matching:
+        score: 0.4743
+Vehicle.Powertrain.FuelSystem.TankCapacity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DD
+    signal: FuelLevel1
+    metadata:
+      matching:
+        score: 0.5631
+Vehicle.Powertrain.FuelSystem.AbsoluteLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFE
+    signal: EngInstantaneousFuelEconomy
+    metadata:
+      matching:
+        score: 0.6021
+Vehicle.Powertrain.FuelSystem.RelativeLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DD
+    signal: FuelLevel1
+    metadata:
+      matching:
+        score: 0.6596
+Vehicle.Powertrain.FuelSystem.Range:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC2
+    signal: TransCurrentRange
+    metadata:
+      matching:
+        score: 0.5406
+Vehicle.Powertrain.FuelSystem.TimeRemaining:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CT4
+    signal: EngCyl16CombustionTime
+    metadata:
+      matching:
+        score: 0.5628
+Vehicle.Powertrain.FuelSystem.InstantConsumption:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFE
+    signal: EngInstantaneousFuelEconomy
+    metadata:
+      matching:
+        score: 0.6828
+Vehicle.Powertrain.FuelSystem.AverageConsumption:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFE
+    signal: EngAverageFuelEconomy
+    metadata:
+      matching:
+        score: 0.6018
+Vehicle.Powertrain.FuelSystem.ConsumptionSinceStart:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GFC
+    signal: TripFuel
+    metadata:
+      matching:
+        score: 0.7262
+Vehicle.Powertrain.FuelSystem.IsEngineStopStartEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EOI
+    signal: EngFuelShutoff1Ctrl
+    metadata:
+      matching:
+        score: 0.6087
+Vehicle.Powertrain.FuelSystem.IsFuelLevelLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM15
+    signal: FuelLevelWarning
+    metadata:
+      matching:
+        score: 0.6095
+Vehicle.Powertrain.FuelSystem.RefuelPortPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EngFelThrottleValveInformation
+    signal: EngDesiredThrottleValve1Pos
+    metadata:
+      matching:
+        score: 0.5343
+Vehicle.Powertrain.FuelSystem.IsFuelPortFlapOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: FuelSystemMonitoringStatus
+    metadata:
+      matching:
+        score: 0.5519
+Vehicle.Body.BodyType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS11
+    signal: VehicleABSActive
+    metadata:
+      matching:
+        score: 0.4450
+Vehicle.Body.RefuelPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AF2
+    signal: EngTurboWastegateValvePos
+    metadata:
+      matching:
+        score: 0.5101
+Vehicle.Body.Hood.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.4647
+Vehicle.Body.Trunk.Front.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5636
+Vehicle.Body.Trunk.Front.IsLocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: LockStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5173
+Vehicle.Body.Trunk.Front.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LD
+    signal: TrctorRearHighMountedWorkLights
+    metadata:
+      matching:
+        score: 0.4708
+Vehicle.Body.Trunk.Rear.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5836
+Vehicle.Body.Trunk.Rear.IsLocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: LockStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5248
+Vehicle.Body.Trunk.Rear.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightRearLight
+    metadata:
+      matching:
+        score: 0.4999
+Vehicle.Body.Horn.IsActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM24
+    signal: OperatingPanelActive
+    metadata:
+      matching:
+        score: 0.5313
+Vehicle.Body.Raindetection.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarIntensityPercent
+    metadata:
+      matching:
+        score: 0.4797
+Vehicle.Body.Windshield.Front.Wiping.Mode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperDelayCtrl
+    metadata:
+      matching:
+        score: 0.4908
+Vehicle.Body.Windshield.Front.Wiping.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarIntensityPercent
+    metadata:
+      matching:
+        score: 0.5086
+Vehicle.Body.Windshield.Front.Wiping.System.Mode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5674
+Vehicle.Body.Windshield.Front.Wiping.System.Frequency:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperDelayCtrl
+    metadata:
+      matching:
+        score: 0.5330
+Vehicle.Body.Windshield.Front.Wiping.System.TargetPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5737
+Vehicle.Body.Windshield.Front.Wiping.System.ActualPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: FrontOperatorWiperSwitch
+    metadata:
+      matching:
+        score: 0.5233
+Vehicle.Body.Windshield.Front.Wiping.System.DriveCurrent:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5396
+Vehicle.Body.Windshield.Front.Wiping.System.IsWiping:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5973
+Vehicle.Body.Windshield.Front.Wiping.System.IsEndingWipeCycle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: FrontOperatorWiperSwitch
+    metadata:
+      matching:
+        score: 0.5995
+Vehicle.Body.Windshield.Front.Wiping.System.IsWiperError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5355
+Vehicle.Body.Windshield.Front.Wiping.System.IsPositionReached:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: FrontOperatorWiperSwitch
+    metadata:
+      matching:
+        score: 0.4898
+Vehicle.Body.Windshield.Front.Wiping.System.IsBlocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5622
+Vehicle.Body.Windshield.Front.Wiping.System.IsOverheated:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.4976
+Vehicle.Body.Windshield.Front.Wiping.WiperWear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.4101
+Vehicle.Body.Windshield.Front.Wiping.IsWipersWorn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.4931
+Vehicle.Body.Windshield.Front.IsHeatingOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HTR
+    signal: CabVentilation
+    metadata:
+      matching:
+        score: 0.5082
+Vehicle.Body.Windshield.Front.WasherFluid.IsLevelLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TRF2
+    signal: TransOilLevelSwitch
+    metadata:
+      matching:
+        score: 0.5405
+Vehicle.Body.Windshield.Front.WasherFluid.Level:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DD
+    signal: WasherFluidLevel
+    metadata:
+      matching:
+        score: 0.6750
+Vehicle.Body.Windshield.Rear.Wiping.Mode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperDelayCtrl
+    metadata:
+      matching:
+        score: 0.4908
+Vehicle.Body.Windshield.Rear.Wiping.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarIntensityPercent
+    metadata:
+      matching:
+        score: 0.5086
+Vehicle.Body.Windshield.Rear.Wiping.System.Mode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5674
+Vehicle.Body.Windshield.Rear.Wiping.System.Frequency:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperDelayCtrl
+    metadata:
+      matching:
+        score: 0.5330
+Vehicle.Body.Windshield.Rear.Wiping.System.TargetPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5737
+Vehicle.Body.Windshield.Rear.Wiping.System.ActualPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: FrontOperatorWiperSwitch
+    metadata:
+      matching:
+        score: 0.5233
+Vehicle.Body.Windshield.Rear.Wiping.System.DriveCurrent:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5396
+Vehicle.Body.Windshield.Rear.Wiping.System.IsWiping:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5973
+Vehicle.Body.Windshield.Rear.Wiping.System.IsEndingWipeCycle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: FrontOperatorWiperSwitch
+    metadata:
+      matching:
+        score: 0.5995
+Vehicle.Body.Windshield.Rear.Wiping.System.IsWiperError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5355
+Vehicle.Body.Windshield.Rear.Wiping.System.IsPositionReached:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: FrontOperatorWiperSwitch
+    metadata:
+      matching:
+        score: 0.4898
+Vehicle.Body.Windshield.Rear.Wiping.System.IsBlocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.5622
+Vehicle.Body.Windshield.Rear.Wiping.System.IsOverheated:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.4976
+Vehicle.Body.Windshield.Rear.Wiping.WiperWear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.4101
+Vehicle.Body.Windshield.Rear.Wiping.IsWipersWorn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OWW
+    signal: RearWiperSwitch
+    metadata:
+      matching:
+        score: 0.4931
+Vehicle.Body.Windshield.Rear.IsHeatingOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT2OG1
+    signal: Aftrtrtmnt2OtltGsSnsrHeaterCtrl
+    metadata:
+      matching:
+        score: 0.5088
+Vehicle.Body.Windshield.Rear.WasherFluid.IsLevelLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TRF2
+    signal: TransOilLevelSwitch
+    metadata:
+      matching:
+        score: 0.5405
+Vehicle.Body.Windshield.Rear.WasherFluid.Level:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DD
+    signal: WasherFluidLevel
+    metadata:
+      matching:
+        score: 0.6750
+Vehicle.Body.Lights.LightSwitch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM35
+    signal: AmberWarningLampStatus
+    metadata:
+      matching:
+        score: 0.5590
+Vehicle.Body.Lights.IsHighBeamSwitchOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LC
+    signal: HighBeamHeadLightCmd
+    metadata:
+      matching:
+        score: 0.5496
+Vehicle.Body.Lights.Beam.Low.IsOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT2AC1
+    signal: Aftrtreatment2AirEnableActuator
+    metadata:
+      matching:
+        score: 0.5000
+Vehicle.Body.Lights.Beam.Low.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM23
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.4686
+Vehicle.Body.Lights.Beam.High.IsOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LC
+    signal: HighBeamHeadLightCmd
+    metadata:
+      matching:
+        score: 0.4987
+Vehicle.Body.Lights.Beam.High.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM23
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.4646
+Vehicle.Body.Lights.Running.IsOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1AC1
+    signal: Aftertreatment1AirSystemRelay
+    metadata:
+      matching:
+        score: 0.4970
+Vehicle.Body.Lights.Running.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AFSS
+    signal: LeftHeadlampDynamicBendingLight
+    metadata:
+      matching:
+        score: 0.4414
+Vehicle.Body.Lights.Backup.IsOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDC1
+    signal: VDCBrakeLightRq
+    metadata:
+      matching:
+        score: 0.5319
+Vehicle.Body.Lights.Backup.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM23
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.4914
+Vehicle.Body.Lights.Parking.IsOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.5262
+Vehicle.Body.Lights.Parking.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.4398
+Vehicle.Body.Lights.Fog.Rear.IsOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightRearFogLight
+    metadata:
+      matching:
+        score: 0.6138
+Vehicle.Body.Lights.Fog.Rear.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightRearFogLight
+    metadata:
+      matching:
+        score: 0.4976
+Vehicle.Body.Lights.Fog.Front.IsOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightRearFogLight
+    metadata:
+      matching:
+        score: 0.5716
+Vehicle.Body.Lights.Fog.Front.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.4571
+Vehicle.Body.Lights.LicensePlate.IsOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightRearRegPltLight
+    metadata:
+      matching:
+        score: 0.5253
+Vehicle.Body.Lights.LicensePlate.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.4323
+Vehicle.Body.Lights.Brake.IsActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS21
+    signal: VehicleServiceBrakeActive
+    metadata:
+      matching:
+        score: 0.6011
+Vehicle.Body.Lights.Brake.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ERC1
+    signal: RetarderRqingBrakeLight
+    metadata:
+      matching:
+        score: 0.5280
+Vehicle.Body.Lights.Hazard.IsSignaling:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailRightRearWidIndLight
+    metadata:
+      matching:
+        score: 0.5300
+Vehicle.Body.Lights.Hazard.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.4907
+Vehicle.Body.Lights.DirectionIndicator.Left.IsSignaling:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailRightRearWidIndLight
+    metadata:
+      matching:
+        score: 0.5789
+Vehicle.Body.Lights.DirectionIndicator.Left.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM23
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.4792
+Vehicle.Body.Lights.DirectionIndicator.Right.IsSignaling:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailRightRearWidIndLight
+    metadata:
+      matching:
+        score: 0.5669
+Vehicle.Body.Lights.DirectionIndicator.Right.IsDefect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM23
+    signal: MalfunctionIndicatorLampStatus
+    metadata:
+      matching:
+        score: 0.5008
+Vehicle.Body.Mirrors.DriverSide.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: DirectionIndicator
+    metadata:
+      matching:
+        score: 0.4674
+Vehicle.Body.Mirrors.DriverSide.Pan:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FLI2
+    signal: LaneTrackingStatusRightSide
+    metadata:
+      matching:
+        score: 0.4228
+Vehicle.Body.Mirrors.DriverSide.IsHeatingOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HTR
+    signal: CabHeatingZone
+    metadata:
+      matching:
+        score: 0.4663
+Vehicle.Body.Mirrors.PassengerSide.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: DirectionIndicator
+    metadata:
+      matching:
+        score: 0.4798
+Vehicle.Body.Mirrors.PassengerSide.Pan:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: DirectionIndicator
+    metadata:
+      matching:
+        score: 0.4263
+Vehicle.Body.Mirrors.PassengerSide.IsHeatingOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HTR
+    signal: CabVentilation
+    metadata:
+      matching:
+        score: 0.4714
+Vehicle.Body.RearMainSpoilerPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC10
+    signal: EGR2CoolerBypassActuatorPos
+    metadata:
+      matching:
+        score: 0.4559
+Vehicle.Body.PowerOptimizeLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LOI
+    signal: RghtBldeCtrlModeOperatorControl
+    metadata:
+      matching:
+        score: 0.4441
+Vehicle.Cabin.RearShade.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.5229
+Vehicle.Cabin.RearShade.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AFSS
+    signal: RightHeadlampLightDistribution
+    metadata:
+      matching:
+        score: 0.4041
+Vehicle.Cabin.HVAC.Station.Row1.Driver.FanSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: RqedPercentFanSpeed
+    metadata:
+      matching:
+        score: 0.6672
+Vehicle.Cabin.HVAC.Station.Row1.Driver.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.6088
+Vehicle.Cabin.HVAC.Station.Row1.Driver.AirDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4937
+Vehicle.Cabin.HVAC.Station.Row1.Passenger.FanSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: RqedPercentFanSpeed
+    metadata:
+      matching:
+        score: 0.6496
+Vehicle.Cabin.HVAC.Station.Row1.Passenger.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.5953
+Vehicle.Cabin.HVAC.Station.Row1.Passenger.AirDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4789
+Vehicle.Cabin.HVAC.Station.Row2.Driver.FanSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: RqedPercentFanSpeed
+    metadata:
+      matching:
+        score: 0.6672
+Vehicle.Cabin.HVAC.Station.Row2.Driver.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.6088
+Vehicle.Cabin.HVAC.Station.Row2.Driver.AirDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4937
+Vehicle.Cabin.HVAC.Station.Row2.Passenger.FanSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: RqedPercentFanSpeed
+    metadata:
+      matching:
+        score: 0.6496
+Vehicle.Cabin.HVAC.Station.Row2.Passenger.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.5953
+Vehicle.Cabin.HVAC.Station.Row2.Passenger.AirDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4789
+Vehicle.Cabin.HVAC.Station.Row3.Driver.FanSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: RqedPercentFanSpeed
+    metadata:
+      matching:
+        score: 0.6672
+Vehicle.Cabin.HVAC.Station.Row3.Driver.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.6088
+Vehicle.Cabin.HVAC.Station.Row3.Driver.AirDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4937
+Vehicle.Cabin.HVAC.Station.Row3.Passenger.FanSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: RqedPercentFanSpeed
+    metadata:
+      matching:
+        score: 0.6496
+Vehicle.Cabin.HVAC.Station.Row3.Passenger.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.5953
+Vehicle.Cabin.HVAC.Station.Row3.Passenger.AirDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4789
+Vehicle.Cabin.HVAC.Station.Row4.Driver.FanSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: RqedPercentFanSpeed
+    metadata:
+      matching:
+        score: 0.6672
+Vehicle.Cabin.HVAC.Station.Row4.Driver.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.6088
+Vehicle.Cabin.HVAC.Station.Row4.Driver.AirDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4937
+Vehicle.Cabin.HVAC.Station.Row4.Passenger.FanSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: RqedPercentFanSpeed
+    metadata:
+      matching:
+        score: 0.6496
+Vehicle.Cabin.HVAC.Station.Row4.Passenger.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.5953
+Vehicle.Cabin.HVAC.Station.Row4.Passenger.AirDistribution:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4789
+Vehicle.Cabin.HVAC.IsRecirculationActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ET2
+    signal: EngExhaustGasRecirculation1Temp
+    metadata:
+      matching:
+        score: 0.4706
+Vehicle.Cabin.HVAC.IsFrontDefrosterActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ACCVC
+    signal: AftrcoolerCoolantThermostatMode
+    metadata:
+      matching:
+        score: 0.4242
+Vehicle.Cabin.HVAC.IsRearDefrosterActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.4261
+Vehicle.Cabin.HVAC.IsAirConditioningActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.5051
+Vehicle.Cabin.HVAC.AmbientAirTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.8477
+Vehicle.Cabin.HVAC.PowerOptimizeLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LOI
+    signal: RghtBldeCtrlModeOperatorControl
+    metadata:
+      matching:
+        score: 0.4895
+Vehicle.Cabin.Infotainment.Media.Action:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM13
+    signal: ISO9141
+    metadata:
+      matching:
+        score: 0.3286
+Vehicle.Cabin.Infotainment.Media.Played.Source:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM13
+    signal: ISO9141
+    metadata:
+      matching:
+        score: 0.2902
+Vehicle.Cabin.Infotainment.Media.Played.Artist:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LVDD
+    signal: DisplayDeadbands
+    metadata:
+      matching:
+        score: 0.2516
+Vehicle.Cabin.Infotainment.Media.Played.Album:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE21
+    signal: RampLevelStorage
+    metadata:
+      matching:
+        score: 0.2886
+Vehicle.Cabin.Infotainment.Media.Played.Track:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AUXIO5
+    signal: AuxI_OChannel3
+    metadata:
+      matching:
+        score: 0.2872
+Vehicle.Cabin.Infotainment.Media.Played.URI:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM13
+    signal: ISO9141
+    metadata:
+      matching:
+        score: 0.3776
+Vehicle.Cabin.Infotainment.Media.Played.PlaybackRate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SSI
+    signal: PitchRate
+    metadata:
+      matching:
+        score: 0.3860
+Vehicle.Cabin.Infotainment.Media.DeclinedURI:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ACL
+    signal: ECUInstance
+    metadata:
+      matching:
+        score: 0.2571
+Vehicle.Cabin.Infotainment.Media.SelectedURI:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM13
+    signal: CurrentDataLink
+    metadata:
+      matching:
+        score: 0.2862
+Vehicle.Cabin.Infotainment.Media.Volume:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPV4
+    signal: ValveAssemblyLoadSensePress
+    metadata:
+      matching:
+        score: 0.2529
+Vehicle.Cabin.Infotainment.Navigation.DestinationSet.Latitude:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Latitude
+    metadata:
+      matching:
+        score: 0.5606
+Vehicle.Cabin.Infotainment.Navigation.DestinationSet.Longitude:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VP
+    signal: Longitude
+    metadata:
+      matching:
+        score: 0.5221
+Vehicle.Cabin.Infotainment.Navigation.Mute:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: SilentAlarmStatus
+    metadata:
+      matching:
+        score: 0.3751
+Vehicle.Cabin.Infotainment.Navigation.Volume:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerAngleSensorActiveMode
+    metadata:
+      matching:
+        score: 0.3300
+Vehicle.Cabin.Infotainment.Navigation.GuidanceVoice:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RESET
+    signal: TripGroup2Proprietary
+    metadata:
+      matching:
+        score: 0.3351
+Vehicle.Cabin.Infotainment.HMI.CurrentLanguage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ISO15765_Funct
+    signal: ProtocolCtrlInformation
+    metadata:
+      matching:
+        score: 0.4552
+Vehicle.Cabin.Infotainment.HMI.FontSize:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARI
+    signal: YawRateExRangeFigureOfMerit
+    metadata:
+      matching:
+        score: 0.3204
+Vehicle.Cabin.Infotainment.HMI.DateFormat:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TD
+    signal: Hours
+    metadata:
+      matching:
+        score: 0.4353
+Vehicle.Cabin.Infotainment.HMI.TimeFormat:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TD
+    signal: Hours
+    metadata:
+      matching:
+        score: 0.5164
+Vehicle.Cabin.Infotainment.HMI.DistanceUnit:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM21
+    signal: DistanceWhileMILisActivated
+    metadata:
+      matching:
+        score: 0.4599
+Vehicle.Cabin.Infotainment.HMI.FuelVolumeUnit:
+  type: sensor
+  datatype: float
+  dbc:
+    message: A1
+    signal: EngGasSupplyPress
+    metadata:
+      matching:
+        score: 0.5121
+Vehicle.Cabin.Infotainment.HMI.FuelEconomyUnits:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFE
+    signal: EngFuelRate
+    metadata:
+      matching:
+        score: 0.5123
+Vehicle.Cabin.Infotainment.HMI.EVEconomyUnits:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFE
+    signal: EngFuelRate
+    metadata:
+      matching:
+        score: 0.4576
+Vehicle.Cabin.Infotainment.HMI.TemperatureUnit:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ET2
+    signal: EngECUTemp
+    metadata:
+      matching:
+        score: 0.5008
+Vehicle.Cabin.Infotainment.HMI.TirePressureUnit:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TP3
+    signal: DriveChannelTirePress
+    metadata:
+      matching:
+        score: 0.6108
+Vehicle.Cabin.Infotainment.HMI.SpeedUnit:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESSI
+    signal: EngSpeed1
+    metadata:
+      matching:
+        score: 0.4908
+Vehicle.Cabin.Infotainment.HMI.EVEnergyUnits:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP2
+    signal: ECUPowerOutputSupplyVoltage1
+    metadata:
+      matching:
+        score: 0.4606
+Vehicle.Cabin.Infotainment.HMI.Brightness:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OEL
+    signal: OperatorsDesiredBacklight
+    metadata:
+      matching:
+        score: 0.4652
+Vehicle.Cabin.Infotainment.HMI.DayNightMode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TC1
+    signal: TrnsShftSlctorDisplayModeSwitch
+    metadata:
+      matching:
+        score: 0.3782
+Vehicle.Cabin.Infotainment.HMI.IsScreenAlwaysOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM13
+    signal: SuspendSignal
+    metadata:
+      matching:
+        score: 0.4140
+Vehicle.Cabin.Infotainment.HMI.LastActionTime:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TD
+    signal: LocalHourOffset
+    metadata:
+      matching:
+        score: 0.4859
+Vehicle.Cabin.Infotainment.HMI.DisplayOffDuration:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SHUTDN
+    signal: EngIdleShutdownTimerState
+    metadata:
+      matching:
+        score: 0.5118
+Vehicle.Cabin.Infotainment.SmartphoneProjection.Active:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LOI
+    signal: StElvtnSnsor2ReferenceElevation
+    metadata:
+      matching:
+        score: 0.3785
+Vehicle.Cabin.Infotainment.SmartphoneProjection.Source:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM13
+    signal: SAE_J1587
+    metadata:
+      matching:
+        score: 0.3297
+Vehicle.Cabin.Infotainment.SmartphoneProjection.SupportedMode:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LOI
+    signal: StElvtnSnsor2ReferenceElevation
+    metadata:
+      matching:
+        score: 0.3586
+Vehicle.Cabin.Infotainment.PowerOptimizeLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LOI
+    signal: RghtBldeCtrlModeOperatorControl
+    metadata:
+      matching:
+        score: 0.4571
+Vehicle.Cabin.Sunroof.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDS2
+    signal: VehicleRoll
+    metadata:
+      matching:
+        score: 0.3899
+Vehicle.Cabin.Sunroof.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.5529
+Vehicle.Cabin.Sunroof.Shade.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.5449
+Vehicle.Cabin.Sunroof.Shade.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarIntensityPercent
+    metadata:
+      matching:
+        score: 0.4201
+Vehicle.Cabin.RearviewMirror.DimmingLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CL
+    signal: IlluminationBrightnessPercent
+    metadata:
+      matching:
+        score: 0.4856
+Vehicle.Cabin.Light.IsGloveBoxOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerInteriorLight
+    metadata:
+      matching:
+        score: 0.3259
+Vehicle.Cabin.Light.IsDomeOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerInteriorLight
+    metadata:
+      matching:
+        score: 0.4032
+Vehicle.Cabin.Light.PerceivedAmbientLight:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CL
+    signal: IlluminationBrightnessPercent
+    metadata:
+      matching:
+        score: 0.4935
+Vehicle.Cabin.Light.Spotlight.Row1.DriverSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LD
+    signal: RightTurnSignalLights
+    metadata:
+      matching:
+        score: 0.5388
+Vehicle.Cabin.Light.Spotlight.Row1.DriverSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarIntensityPercent
+    metadata:
+      matching:
+        score: 0.5183
+Vehicle.Cabin.Light.Spotlight.Row1.DriverSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: RedStopLampState
+    metadata:
+      matching:
+        score: 0.4799
+Vehicle.Cabin.Light.Spotlight.Row1.PassengerSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.5174
+Vehicle.Cabin.Light.Spotlight.Row1.PassengerSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CL
+    signal: IlluminationBrightnessPercent
+    metadata:
+      matching:
+        score: 0.4927
+Vehicle.Cabin.Light.Spotlight.Row1.PassengerSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: AmberWarningLampStatus
+    metadata:
+      matching:
+        score: 0.4984
+Vehicle.Cabin.Light.Spotlight.Row2.DriverSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LD
+    signal: RightTurnSignalLights
+    metadata:
+      matching:
+        score: 0.5388
+Vehicle.Cabin.Light.Spotlight.Row2.DriverSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarIntensityPercent
+    metadata:
+      matching:
+        score: 0.5183
+Vehicle.Cabin.Light.Spotlight.Row2.DriverSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: RedStopLampState
+    metadata:
+      matching:
+        score: 0.4799
+Vehicle.Cabin.Light.Spotlight.Row2.PassengerSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.5174
+Vehicle.Cabin.Light.Spotlight.Row2.PassengerSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CL
+    signal: IlluminationBrightnessPercent
+    metadata:
+      matching:
+        score: 0.4927
+Vehicle.Cabin.Light.Spotlight.Row2.PassengerSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: AmberWarningLampStatus
+    metadata:
+      matching:
+        score: 0.4984
+Vehicle.Cabin.Light.Spotlight.Row3.DriverSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LD
+    signal: RightTurnSignalLights
+    metadata:
+      matching:
+        score: 0.5388
+Vehicle.Cabin.Light.Spotlight.Row3.DriverSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarIntensityPercent
+    metadata:
+      matching:
+        score: 0.5183
+Vehicle.Cabin.Light.Spotlight.Row3.DriverSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: RedStopLampState
+    metadata:
+      matching:
+        score: 0.4799
+Vehicle.Cabin.Light.Spotlight.Row3.PassengerSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.5174
+Vehicle.Cabin.Light.Spotlight.Row3.PassengerSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CL
+    signal: IlluminationBrightnessPercent
+    metadata:
+      matching:
+        score: 0.4927
+Vehicle.Cabin.Light.Spotlight.Row3.PassengerSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: AmberWarningLampStatus
+    metadata:
+      matching:
+        score: 0.4984
+Vehicle.Cabin.Light.Spotlight.Row4.DriverSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LD
+    signal: RightTurnSignalLights
+    metadata:
+      matching:
+        score: 0.5388
+Vehicle.Cabin.Light.Spotlight.Row4.DriverSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarIntensityPercent
+    metadata:
+      matching:
+        score: 0.5183
+Vehicle.Cabin.Light.Spotlight.Row4.DriverSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: RedStopLampState
+    metadata:
+      matching:
+        score: 0.4799
+Vehicle.Cabin.Light.Spotlight.Row4.PassengerSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.5174
+Vehicle.Cabin.Light.Spotlight.Row4.PassengerSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CL
+    signal: IlluminationBrightnessPercent
+    metadata:
+      matching:
+        score: 0.4927
+Vehicle.Cabin.Light.Spotlight.Row4.PassengerSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: AmberWarningLampStatus
+    metadata:
+      matching:
+        score: 0.4984
+Vehicle.Cabin.Light.AmbientLight.Row1.DriverSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.4840
+Vehicle.Cabin.Light.AmbientLight.Row1.DriverSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarSensorMax
+    metadata:
+      matching:
+        score: 0.5008
+Vehicle.Cabin.Light.AmbientLight.Row1.DriverSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.4716
+Vehicle.Cabin.Light.AmbientLight.Row1.PassengerSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.4646
+Vehicle.Cabin.Light.AmbientLight.Row1.PassengerSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarSensorMax
+    metadata:
+      matching:
+        score: 0.4852
+Vehicle.Cabin.Light.AmbientLight.Row1.PassengerSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.4675
+Vehicle.Cabin.Light.AmbientLight.Row2.DriverSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.4840
+Vehicle.Cabin.Light.AmbientLight.Row2.DriverSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarSensorMax
+    metadata:
+      matching:
+        score: 0.5008
+Vehicle.Cabin.Light.AmbientLight.Row2.DriverSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.4716
+Vehicle.Cabin.Light.AmbientLight.Row2.PassengerSide.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM25
+    signal: TrailerRightDirIndLight
+    metadata:
+      matching:
+        score: 0.4646
+Vehicle.Cabin.Light.AmbientLight.Row2.PassengerSide.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SolarSensorMax
+    metadata:
+      matching:
+        score: 0.4852
+Vehicle.Cabin.Light.AmbientLight.Row2.PassengerSide.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.4675
+Vehicle.Cabin.Light.InteractiveLightBar.IsLightOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VDC1
+    signal: VDCBrakeLightRq
+    metadata:
+      matching:
+        score: 0.4840
+Vehicle.Cabin.Light.InteractiveLightBar.Intensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CL
+    signal: IlluminationBrightnessPercent
+    metadata:
+      matching:
+        score: 0.4503
+Vehicle.Cabin.Light.InteractiveLightBar.Color:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM12
+    signal: FlashMalfuncIndicatorLamp
+    metadata:
+      matching:
+        score: 0.4436
+Vehicle.Cabin.Light.InteractiveLightBar.Effect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LD
+    signal: ImplementRightFacingWorkLight
+    metadata:
+      matching:
+        score: 0.4653
+Vehicle.Cabin.Door.Row1.DriverSide.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.6073
+Vehicle.Cabin.Door.Row1.DriverSide.IsLocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: LockStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5574
+Vehicle.Cabin.Door.Row1.DriverSide.Window.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.6048
+Vehicle.Cabin.Door.Row1.DriverSide.Window.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor10
+    metadata:
+      matching:
+        score: 0.5222
+Vehicle.Cabin.Door.Row1.DriverSide.Window.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: ParkingBrakeSwitch
+    metadata:
+      matching:
+        score: 0.4744
+Vehicle.Cabin.Door.Row1.DriverSide.IsChildLockActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5713
+Vehicle.Cabin.Door.Row1.DriverSide.Shade.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OEL
+    signal: HighLowBeamSwitch
+    metadata:
+      matching:
+        score: 0.4532
+Vehicle.Cabin.Door.Row1.DriverSide.Shade.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LC
+    signal: ImplmentLeftForwardWorkLightCmd
+    metadata:
+      matching:
+        score: 0.3926
+Vehicle.Cabin.Door.Row1.PassengerSide.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.6049
+Vehicle.Cabin.Door.Row1.PassengerSide.IsLocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: LockStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5639
+Vehicle.Cabin.Door.Row1.PassengerSide.Window.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.6048
+Vehicle.Cabin.Door.Row1.PassengerSide.Window.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor10
+    metadata:
+      matching:
+        score: 0.5222
+Vehicle.Cabin.Door.Row1.PassengerSide.Window.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: ParkingBrakeSwitch
+    metadata:
+      matching:
+        score: 0.4744
+Vehicle.Cabin.Door.Row1.PassengerSide.IsChildLockActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5674
+Vehicle.Cabin.Door.Row1.PassengerSide.Shade.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OEL
+    signal: HighLowBeamSwitch
+    metadata:
+      matching:
+        score: 0.4532
+Vehicle.Cabin.Door.Row1.PassengerSide.Shade.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LC
+    signal: ImplmentLeftForwardWorkLightCmd
+    metadata:
+      matching:
+        score: 0.3926
+Vehicle.Cabin.Door.Row2.DriverSide.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.6073
+Vehicle.Cabin.Door.Row2.DriverSide.IsLocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: LockStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5574
+Vehicle.Cabin.Door.Row2.DriverSide.Window.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.6048
+Vehicle.Cabin.Door.Row2.DriverSide.Window.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor10
+    metadata:
+      matching:
+        score: 0.5222
+Vehicle.Cabin.Door.Row2.DriverSide.Window.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: ParkingBrakeSwitch
+    metadata:
+      matching:
+        score: 0.4744
+Vehicle.Cabin.Door.Row2.DriverSide.IsChildLockActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5713
+Vehicle.Cabin.Door.Row2.DriverSide.Shade.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OEL
+    signal: HighLowBeamSwitch
+    metadata:
+      matching:
+        score: 0.4532
+Vehicle.Cabin.Door.Row2.DriverSide.Shade.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LC
+    signal: ImplmentLeftForwardWorkLightCmd
+    metadata:
+      matching:
+        score: 0.3926
+Vehicle.Cabin.Door.Row2.PassengerSide.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.6049
+Vehicle.Cabin.Door.Row2.PassengerSide.IsLocked:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: LockStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5639
+Vehicle.Cabin.Door.Row2.PassengerSide.Window.IsOpen:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.6048
+Vehicle.Cabin.Door.Row2.PassengerSide.Window.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor10
+    metadata:
+      matching:
+        score: 0.5222
+Vehicle.Cabin.Door.Row2.PassengerSide.Window.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: ParkingBrakeSwitch
+    metadata:
+      matching:
+        score: 0.4744
+Vehicle.Cabin.Door.Row2.PassengerSide.IsChildLockActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC2
+    signal: OpenStatusOfDoor1
+    metadata:
+      matching:
+        score: 0.5674
+Vehicle.Cabin.Door.Row2.PassengerSide.Shade.Switch:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OEL
+    signal: HighLowBeamSwitch
+    metadata:
+      matching:
+        score: 0.4532
+Vehicle.Cabin.Door.Row2.PassengerSide.Shade.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LC
+    signal: ImplmentLeftForwardWorkLightCmd
+    metadata:
+      matching:
+        score: 0.3926
+Vehicle.Cabin.DoorCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC1
+    signal: Status2OfDoors
+    metadata:
+      matching:
+        score: 0.6332
+Vehicle.Cabin.IsWindowChildLockEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC1
+    signal: DoorRelease
+    metadata:
+      matching:
+        score: 0.4948
+Vehicle.Cabin.Seat.Row1.DriverSide.IsOccupied:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4903
+Vehicle.Cabin.Seat.Row1.DriverSide.Occupant.Identifier.Subject:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.3713
+Vehicle.Cabin.Seat.Row1.DriverSide.Occupant.Identifier.Issuer:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3573
+Vehicle.Cabin.Seat.Row1.DriverSide.IsBelted:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4978
+Vehicle.Cabin.Seat.Row1.DriverSide.Heating:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.4865
+Vehicle.Cabin.Seat.Row1.DriverSide.Massage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleLeft
+    metadata:
+      matching:
+        score: 0.4747
+Vehicle.Cabin.Seat.Row1.DriverSide.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5368
+Vehicle.Cabin.Seat.Row1.DriverSide.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.5245
+Vehicle.Cabin.Seat.Row1.DriverSide.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SSI
+    signal: PitchAngle
+    metadata:
+      matching:
+        score: 0.4426
+Vehicle.Cabin.Seat.Row1.DriverSide.Backrest.Recline:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EJM1
+    signal: Joystick1ThetaAxisPos
+    metadata:
+      matching:
+        score: 0.4453
+Vehicle.Cabin.Seat.Row1.DriverSide.Backrest.Lumbar.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OCSI
+    signal: OccpntClssficationSystem4Status
+    metadata:
+      matching:
+        score: 0.4117
+Vehicle.Cabin.Seat.Row1.DriverSide.Backrest.Lumbar.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4802
+Vehicle.Cabin.Seat.Row1.DriverSide.Backrest.SideBolster.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.3672
+Vehicle.Cabin.Seat.Row1.DriverSide.Seating.Length:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: TypeOfPassengerCount
+    metadata:
+      matching:
+        score: 0.4298
+Vehicle.Cabin.Seat.Row1.DriverSide.Headrest.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4451
+Vehicle.Cabin.Seat.Row1.DriverSide.Headrest.Angle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerAngleSensorCalibrated
+    metadata:
+      matching:
+        score: 0.4460
+Vehicle.Cabin.Seat.Row1.DriverSide.Airbag.IsDeployed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CN
+    signal: CrashChecksum
+    metadata:
+      matching:
+        score: 0.5025
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.IsWarmerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4821
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.IsCoolerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4592
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5511
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5552
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleIncrementSwitch
+    metadata:
+      matching:
+        score: 0.4830
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.5003
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.IsTiltForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4695
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.IsTiltBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4660
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Backrest.IsReclineForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4297
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Backrest.IsReclineBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4416
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Backrest.Lumbar.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3564
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Backrest.Lumbar.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3730
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Backrest.Lumbar.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4544
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Backrest.Lumbar.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Backrest.SideBolster.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3544
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Backrest.SideBolster.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3613
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Seating.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC5
+    signal: TransForwardDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4651
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Seating.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4817
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Headrest.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4548
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Headrest.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch2
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Headrest.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4642
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Headrest.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4721
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Massage.IsIncreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.4189
+Vehicle.Cabin.Seat.Row1.DriverSide.Switch.Massage.IsDecreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC3
+    signal: TransShiftFingerRailActuator1
+    metadata:
+      matching:
+        score: 0.4581
+Vehicle.Cabin.Seat.Row1.Middle.IsOccupied:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: PatronCount
+    metadata:
+      matching:
+        score: 0.4425
+Vehicle.Cabin.Seat.Row1.Middle.Occupant.Identifier.Subject:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.3713
+Vehicle.Cabin.Seat.Row1.Middle.Occupant.Identifier.Issuer:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3573
+Vehicle.Cabin.Seat.Row1.Middle.IsBelted:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4377
+Vehicle.Cabin.Seat.Row1.Middle.Heating:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.4423
+Vehicle.Cabin.Seat.Row1.Middle.Massage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleLeft
+    metadata:
+      matching:
+        score: 0.4540
+Vehicle.Cabin.Seat.Row1.Middle.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BJM4
+    signal: Joystick4XAxisPos
+    metadata:
+      matching:
+        score: 0.5056
+Vehicle.Cabin.Seat.Row1.Middle.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.5073
+Vehicle.Cabin.Seat.Row1.Middle.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SSI
+    signal: PitchAngle
+    metadata:
+      matching:
+        score: 0.4455
+Vehicle.Cabin.Seat.Row1.Middle.Backrest.Recline:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EJM1
+    signal: Joystick1ThetaAxisPos
+    metadata:
+      matching:
+        score: 0.4453
+Vehicle.Cabin.Seat.Row1.Middle.Backrest.Lumbar.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OCSI
+    signal: OccpntClssficationSystem4Status
+    metadata:
+      matching:
+        score: 0.4117
+Vehicle.Cabin.Seat.Row1.Middle.Backrest.Lumbar.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4802
+Vehicle.Cabin.Seat.Row1.Middle.Backrest.SideBolster.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.3672
+Vehicle.Cabin.Seat.Row1.Middle.Seating.Length:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: TypeOfPassengerCount
+    metadata:
+      matching:
+        score: 0.4298
+Vehicle.Cabin.Seat.Row1.Middle.Headrest.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4451
+Vehicle.Cabin.Seat.Row1.Middle.Headrest.Angle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerAngleSensorCalibrated
+    metadata:
+      matching:
+        score: 0.4460
+Vehicle.Cabin.Seat.Row1.Middle.Airbag.IsDeployed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CN
+    signal: CrashChecksum
+    metadata:
+      matching:
+        score: 0.5025
+Vehicle.Cabin.Seat.Row1.Middle.Switch.IsWarmerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4821
+Vehicle.Cabin.Seat.Row1.Middle.Switch.IsCoolerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4592
+Vehicle.Cabin.Seat.Row1.Middle.Switch.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5511
+Vehicle.Cabin.Seat.Row1.Middle.Switch.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5552
+Vehicle.Cabin.Seat.Row1.Middle.Switch.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleIncrementSwitch
+    metadata:
+      matching:
+        score: 0.4830
+Vehicle.Cabin.Seat.Row1.Middle.Switch.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.5003
+Vehicle.Cabin.Seat.Row1.Middle.Switch.IsTiltForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4695
+Vehicle.Cabin.Seat.Row1.Middle.Switch.IsTiltBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4660
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Backrest.IsReclineForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4297
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Backrest.IsReclineBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4416
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Backrest.Lumbar.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3564
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Backrest.Lumbar.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3730
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Backrest.Lumbar.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4544
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Backrest.Lumbar.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Backrest.SideBolster.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3544
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Backrest.SideBolster.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3613
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Seating.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC5
+    signal: TransForwardDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4651
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Seating.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4817
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Headrest.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4548
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Headrest.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch2
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Headrest.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4642
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Headrest.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4721
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Massage.IsIncreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.4189
+Vehicle.Cabin.Seat.Row1.Middle.Switch.Massage.IsDecreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC3
+    signal: TransShiftFingerRailActuator1
+    metadata:
+      matching:
+        score: 0.4581
+Vehicle.Cabin.Seat.Row1.PassengerSide.IsOccupied:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: PatronCount
+    metadata:
+      matching:
+        score: 0.4554
+Vehicle.Cabin.Seat.Row1.PassengerSide.Occupant.Identifier.Subject:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.3713
+Vehicle.Cabin.Seat.Row1.PassengerSide.Occupant.Identifier.Issuer:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3573
+Vehicle.Cabin.Seat.Row1.PassengerSide.IsBelted:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BDS
+    signal: PassengerBeltlockStatus
+    metadata:
+      matching:
+        score: 0.5108
+Vehicle.Cabin.Seat.Row1.PassengerSide.Heating:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.4790
+Vehicle.Cabin.Seat.Row1.PassengerSide.Massage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleLeft
+    metadata:
+      matching:
+        score: 0.4679
+Vehicle.Cabin.Seat.Row1.PassengerSide.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BJM4
+    signal: Joystick4XAxisPos
+    metadata:
+      matching:
+        score: 0.5266
+Vehicle.Cabin.Seat.Row1.PassengerSide.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.5150
+Vehicle.Cabin.Seat.Row1.PassengerSide.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SSI
+    signal: PitchAngle
+    metadata:
+      matching:
+        score: 0.4387
+Vehicle.Cabin.Seat.Row1.PassengerSide.Backrest.Recline:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EJM1
+    signal: Joystick1ThetaAxisPos
+    metadata:
+      matching:
+        score: 0.4453
+Vehicle.Cabin.Seat.Row1.PassengerSide.Backrest.Lumbar.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OCSI
+    signal: OccpntClssficationSystem4Status
+    metadata:
+      matching:
+        score: 0.4117
+Vehicle.Cabin.Seat.Row1.PassengerSide.Backrest.Lumbar.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4802
+Vehicle.Cabin.Seat.Row1.PassengerSide.Backrest.SideBolster.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.3672
+Vehicle.Cabin.Seat.Row1.PassengerSide.Seating.Length:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: TypeOfPassengerCount
+    metadata:
+      matching:
+        score: 0.4298
+Vehicle.Cabin.Seat.Row1.PassengerSide.Headrest.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4451
+Vehicle.Cabin.Seat.Row1.PassengerSide.Headrest.Angle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerAngleSensorCalibrated
+    metadata:
+      matching:
+        score: 0.4460
+Vehicle.Cabin.Seat.Row1.PassengerSide.Airbag.IsDeployed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CN
+    signal: CrashChecksum
+    metadata:
+      matching:
+        score: 0.5025
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.IsWarmerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4821
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.IsCoolerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4592
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5511
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5552
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleIncrementSwitch
+    metadata:
+      matching:
+        score: 0.4830
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.5003
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.IsTiltForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4695
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.IsTiltBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4660
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Backrest.IsReclineForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4297
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Backrest.IsReclineBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4416
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Backrest.Lumbar.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3564
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Backrest.Lumbar.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3730
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Backrest.Lumbar.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4544
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Backrest.Lumbar.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Backrest.SideBolster.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3544
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Backrest.SideBolster.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3613
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Seating.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC5
+    signal: TransForwardDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4651
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Seating.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4817
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Headrest.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4548
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Headrest.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch2
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Headrest.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4642
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Headrest.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4721
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Massage.IsIncreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.4189
+Vehicle.Cabin.Seat.Row1.PassengerSide.Switch.Massage.IsDecreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC3
+    signal: TransShiftFingerRailActuator1
+    metadata:
+      matching:
+        score: 0.4581
+Vehicle.Cabin.Seat.Row2.DriverSide.IsOccupied:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4903
+Vehicle.Cabin.Seat.Row2.DriverSide.Occupant.Identifier.Subject:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.3713
+Vehicle.Cabin.Seat.Row2.DriverSide.Occupant.Identifier.Issuer:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3573
+Vehicle.Cabin.Seat.Row2.DriverSide.IsBelted:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4978
+Vehicle.Cabin.Seat.Row2.DriverSide.Heating:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.4865
+Vehicle.Cabin.Seat.Row2.DriverSide.Massage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleLeft
+    metadata:
+      matching:
+        score: 0.4747
+Vehicle.Cabin.Seat.Row2.DriverSide.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5368
+Vehicle.Cabin.Seat.Row2.DriverSide.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.5245
+Vehicle.Cabin.Seat.Row2.DriverSide.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SSI
+    signal: PitchAngle
+    metadata:
+      matching:
+        score: 0.4426
+Vehicle.Cabin.Seat.Row2.DriverSide.Backrest.Recline:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EJM1
+    signal: Joystick1ThetaAxisPos
+    metadata:
+      matching:
+        score: 0.4453
+Vehicle.Cabin.Seat.Row2.DriverSide.Backrest.Lumbar.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OCSI
+    signal: OccpntClssficationSystem4Status
+    metadata:
+      matching:
+        score: 0.4117
+Vehicle.Cabin.Seat.Row2.DriverSide.Backrest.Lumbar.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4802
+Vehicle.Cabin.Seat.Row2.DriverSide.Backrest.SideBolster.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.3672
+Vehicle.Cabin.Seat.Row2.DriverSide.Seating.Length:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: TypeOfPassengerCount
+    metadata:
+      matching:
+        score: 0.4298
+Vehicle.Cabin.Seat.Row2.DriverSide.Headrest.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4451
+Vehicle.Cabin.Seat.Row2.DriverSide.Headrest.Angle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerAngleSensorCalibrated
+    metadata:
+      matching:
+        score: 0.4460
+Vehicle.Cabin.Seat.Row2.DriverSide.Airbag.IsDeployed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CN
+    signal: CrashChecksum
+    metadata:
+      matching:
+        score: 0.5025
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.IsWarmerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4821
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.IsCoolerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4592
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5511
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5552
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleIncrementSwitch
+    metadata:
+      matching:
+        score: 0.4830
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.5003
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.IsTiltForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4695
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.IsTiltBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4660
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Backrest.IsReclineForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4297
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Backrest.IsReclineBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4416
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Backrest.Lumbar.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3564
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Backrest.Lumbar.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3730
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Backrest.Lumbar.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4544
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Backrest.Lumbar.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Backrest.SideBolster.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3544
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Backrest.SideBolster.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3613
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Seating.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC5
+    signal: TransForwardDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4651
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Seating.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4817
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Headrest.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4548
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Headrest.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch2
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Headrest.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4642
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Headrest.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4721
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Massage.IsIncreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.4189
+Vehicle.Cabin.Seat.Row2.DriverSide.Switch.Massage.IsDecreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC3
+    signal: TransShiftFingerRailActuator1
+    metadata:
+      matching:
+        score: 0.4581
+Vehicle.Cabin.Seat.Row2.Middle.IsOccupied:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: PatronCount
+    metadata:
+      matching:
+        score: 0.4425
+Vehicle.Cabin.Seat.Row2.Middle.Occupant.Identifier.Subject:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.3713
+Vehicle.Cabin.Seat.Row2.Middle.Occupant.Identifier.Issuer:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3573
+Vehicle.Cabin.Seat.Row2.Middle.IsBelted:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4377
+Vehicle.Cabin.Seat.Row2.Middle.Heating:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.4423
+Vehicle.Cabin.Seat.Row2.Middle.Massage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleLeft
+    metadata:
+      matching:
+        score: 0.4540
+Vehicle.Cabin.Seat.Row2.Middle.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BJM4
+    signal: Joystick4XAxisPos
+    metadata:
+      matching:
+        score: 0.5056
+Vehicle.Cabin.Seat.Row2.Middle.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.5073
+Vehicle.Cabin.Seat.Row2.Middle.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SSI
+    signal: PitchAngle
+    metadata:
+      matching:
+        score: 0.4455
+Vehicle.Cabin.Seat.Row2.Middle.Backrest.Recline:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EJM1
+    signal: Joystick1ThetaAxisPos
+    metadata:
+      matching:
+        score: 0.4453
+Vehicle.Cabin.Seat.Row2.Middle.Backrest.Lumbar.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OCSI
+    signal: OccpntClssficationSystem4Status
+    metadata:
+      matching:
+        score: 0.4117
+Vehicle.Cabin.Seat.Row2.Middle.Backrest.Lumbar.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4802
+Vehicle.Cabin.Seat.Row2.Middle.Backrest.SideBolster.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.3672
+Vehicle.Cabin.Seat.Row2.Middle.Seating.Length:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: TypeOfPassengerCount
+    metadata:
+      matching:
+        score: 0.4298
+Vehicle.Cabin.Seat.Row2.Middle.Headrest.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4451
+Vehicle.Cabin.Seat.Row2.Middle.Headrest.Angle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerAngleSensorCalibrated
+    metadata:
+      matching:
+        score: 0.4460
+Vehicle.Cabin.Seat.Row2.Middle.Airbag.IsDeployed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CN
+    signal: CrashChecksum
+    metadata:
+      matching:
+        score: 0.5025
+Vehicle.Cabin.Seat.Row2.Middle.Switch.IsWarmerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4821
+Vehicle.Cabin.Seat.Row2.Middle.Switch.IsCoolerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4592
+Vehicle.Cabin.Seat.Row2.Middle.Switch.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5511
+Vehicle.Cabin.Seat.Row2.Middle.Switch.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5552
+Vehicle.Cabin.Seat.Row2.Middle.Switch.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleIncrementSwitch
+    metadata:
+      matching:
+        score: 0.4830
+Vehicle.Cabin.Seat.Row2.Middle.Switch.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.5003
+Vehicle.Cabin.Seat.Row2.Middle.Switch.IsTiltForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4695
+Vehicle.Cabin.Seat.Row2.Middle.Switch.IsTiltBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4660
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Backrest.IsReclineForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4297
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Backrest.IsReclineBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4416
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Backrest.Lumbar.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3564
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Backrest.Lumbar.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3730
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Backrest.Lumbar.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4544
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Backrest.Lumbar.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Backrest.SideBolster.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3544
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Backrest.SideBolster.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3613
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Seating.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC5
+    signal: TransForwardDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4651
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Seating.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4817
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Headrest.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4548
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Headrest.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch2
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Headrest.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4642
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Headrest.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4721
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Massage.IsIncreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.4189
+Vehicle.Cabin.Seat.Row2.Middle.Switch.Massage.IsDecreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC3
+    signal: TransShiftFingerRailActuator1
+    metadata:
+      matching:
+        score: 0.4581
+Vehicle.Cabin.Seat.Row2.PassengerSide.IsOccupied:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: PatronCount
+    metadata:
+      matching:
+        score: 0.4554
+Vehicle.Cabin.Seat.Row2.PassengerSide.Occupant.Identifier.Subject:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.3713
+Vehicle.Cabin.Seat.Row2.PassengerSide.Occupant.Identifier.Issuer:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3573
+Vehicle.Cabin.Seat.Row2.PassengerSide.IsBelted:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BDS
+    signal: PassengerBeltlockStatus
+    metadata:
+      matching:
+        score: 0.5108
+Vehicle.Cabin.Seat.Row2.PassengerSide.Heating:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: CabInteriorTemp
+    metadata:
+      matching:
+        score: 0.4790
+Vehicle.Cabin.Seat.Row2.PassengerSide.Massage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleLeft
+    metadata:
+      matching:
+        score: 0.4679
+Vehicle.Cabin.Seat.Row2.PassengerSide.Position:
+  type: sensor
+  datatype: float
+  dbc:
+    message: BJM4
+    signal: Joystick4XAxisPos
+    metadata:
+      matching:
+        score: 0.5266
+Vehicle.Cabin.Seat.Row2.PassengerSide.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.5150
+Vehicle.Cabin.Seat.Row2.PassengerSide.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SSI
+    signal: PitchAngle
+    metadata:
+      matching:
+        score: 0.4387
+Vehicle.Cabin.Seat.Row2.PassengerSide.Backrest.Recline:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EJM1
+    signal: Joystick1ThetaAxisPos
+    metadata:
+      matching:
+        score: 0.4453
+Vehicle.Cabin.Seat.Row2.PassengerSide.Backrest.Lumbar.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: OCSI
+    signal: OccpntClssficationSystem4Status
+    metadata:
+      matching:
+        score: 0.4117
+Vehicle.Cabin.Seat.Row2.PassengerSide.Backrest.Lumbar.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4802
+Vehicle.Cabin.Seat.Row2.PassengerSide.Backrest.SideBolster.Support:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.3672
+Vehicle.Cabin.Seat.Row2.PassengerSide.Seating.Length:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: TypeOfPassengerCount
+    metadata:
+      matching:
+        score: 0.4298
+Vehicle.Cabin.Seat.Row2.PassengerSide.Headrest.Height:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ASC3
+    signal: RelativeLevelRearAxleRight
+    metadata:
+      matching:
+        score: 0.4451
+Vehicle.Cabin.Seat.Row2.PassengerSide.Headrest.Angle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerAngleSensorCalibrated
+    metadata:
+      matching:
+        score: 0.4460
+Vehicle.Cabin.Seat.Row2.PassengerSide.Airbag.IsDeployed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CN
+    signal: CrashChecksum
+    metadata:
+      matching:
+        score: 0.5025
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.IsWarmerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4821
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.IsCoolerEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.4592
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5511
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5552
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleIncrementSwitch
+    metadata:
+      matching:
+        score: 0.4830
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: SeatBeltSwitch
+    metadata:
+      matching:
+        score: 0.5003
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.IsTiltForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4695
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.IsTiltBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: EngIdleDecrementSwitch
+    metadata:
+      matching:
+        score: 0.4660
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Backrest.IsReclineForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4297
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Backrest.IsReclineBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4416
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Backrest.Lumbar.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3564
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Backrest.Lumbar.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.3730
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Backrest.Lumbar.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4544
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Backrest.Lumbar.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrix2Switch1
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Backrest.SideBolster.IsMoreSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3544
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Backrest.SideBolster.IsLessSupportEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAC1
+    signal: FrontAxleGroupEngagementStatus
+    metadata:
+      matching:
+        score: 0.3613
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Seating.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC5
+    signal: TransForwardDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4651
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Seating.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4817
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Headrest.IsUpEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch1
+    metadata:
+      matching:
+        score: 0.4548
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Headrest.IsDownEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ARMSWIMC
+    signal: ArmrestSwitchMatrixSwitch2
+    metadata:
+      matching:
+        score: 0.4622
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Headrest.IsForwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4642
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Headrest.IsBackwardEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.4721
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Massage.IsIncreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: MSI2
+    signal: MaterialLiftSwitch
+    metadata:
+      matching:
+        score: 0.4189
+Vehicle.Cabin.Seat.Row2.PassengerSide.Switch.Massage.IsDecreaseEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC3
+    signal: TransShiftFingerRailActuator1
+    metadata:
+      matching:
+        score: 0.4581
+Vehicle.Cabin.DriverPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CM1
+    signal: OperatorSeatDirectionSwitch
+    metadata:
+      matching:
+        score: 0.5614
+Vehicle.Cabin.SeatRowCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: PatronCount
+    metadata:
+      matching:
+        score: 0.5659
+Vehicle.Cabin.SeatPosCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TR7
+    signal: PatronCount
+    metadata:
+      matching:
+        score: 0.4999
+Vehicle.Cabin.Convertible.Status:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DC1
+    signal: Status2OfDoors
+    metadata:
+      matching:
+        score: 0.4273
+Vehicle.Cabin.PowerOptimizeLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LOI
+    signal: RghtBldeCtrlModeOperatorControl
+    metadata:
+      matching:
+        score: 0.4266
+Vehicle.ADAS.ActiveAutonomyLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerAngleSensorActiveMode
+    metadata:
+      matching:
+        score: 0.5145
+Vehicle.ADAS.SupportedAutonomyLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS22
+    signal: LoadingRampApproachAssist
+    metadata:
+      matching:
+        score: 0.4392
+Vehicle.ADAS.CruiseControl.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: CruiseCtrlSetSwitch
+    metadata:
+      matching:
+        score: 0.6319
+Vehicle.ADAS.CruiseControl.IsActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: CruiseCtrlResumeSwitch
+    metadata:
+      matching:
+        score: 0.6517
+Vehicle.ADAS.CruiseControl.SpeedSet:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: CruiseCtrlSetSpeed
+    metadata:
+      matching:
+        score: 0.7640
+Vehicle.ADAS.CruiseControl.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCVS
+    signal: CruiseCtrlResumeSwitch
+    metadata:
+      matching:
+        score: 0.5480
+Vehicle.ADAS.LaneDepartureDetection.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FLI2
+    signal: LnDprtureIndicationEnableStatus
+    metadata:
+      matching:
+        score: 0.6397
+Vehicle.ADAS.LaneDepartureDetection.IsWarning:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FLI1
+    signal: LaneDepartureLeft
+    metadata:
+      matching:
+        score: 0.5756
+Vehicle.ADAS.LaneDepartureDetection.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FLI1
+    signal: LaneDepartureRight
+    metadata:
+      matching:
+        score: 0.5277
+Vehicle.ADAS.ObstacleDetection.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1AC1
+    signal: Aftrtreatment1AirEnableActuator
+    metadata:
+      matching:
+        score: 0.5533
+Vehicle.ADAS.ObstacleDetection.IsWarning:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: MessageChecksum
+    metadata:
+      matching:
+        score: 0.5194
+Vehicle.ADAS.ObstacleDetection.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: MessageChecksum
+    metadata:
+      matching:
+        score: 0.4854
+Vehicle.ADAS.ABS.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: AntiLockBrakingActive
+    metadata:
+      matching:
+        score: 0.7270
+Vehicle.ADAS.ABS.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: ABSFullyOperational
+    metadata:
+      matching:
+        score: 0.7432
+Vehicle.ADAS.ABS.IsEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: AntiLockBrakingActive
+    metadata:
+      matching:
+        score: 0.7173
+Vehicle.ADAS.TCS.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TC1
+    signal: TransMode1
+    metadata:
+      matching:
+        score: 0.6259
+Vehicle.ADAS.TCS.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC7
+    signal: TransWarningIndicator
+    metadata:
+      matching:
+        score: 0.5394
+Vehicle.ADAS.TCS.IsEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EES
+    signal: TurningGearEngaged
+    metadata:
+      matching:
+        score: 0.5800
+Vehicle.ADAS.ESC.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1AC1
+    signal: Aftrtreatment1AirEnableActuator
+    metadata:
+      matching:
+        score: 0.5943
+Vehicle.ADAS.ESC.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM15
+    signal: ErrorIndicator
+    metadata:
+      matching:
+        score: 0.5172
+Vehicle.ADAS.ESC.IsEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ETC1
+    signal: TransDrivelineEngaged
+    metadata:
+      matching:
+        score: 0.5406
+Vehicle.ADAS.ESC.IsStrongCrossWindDetected:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ACC1
+    signal: ACCTargetDetected
+    metadata:
+      matching:
+        score: 0.4359
+Vehicle.ADAS.ESC.RoadFriction.MostProbable:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS21
+    signal: Wheel_BasedVehicleSpeed
+    metadata:
+      matching:
+        score: 0.4462
+Vehicle.ADAS.ESC.RoadFriction.LowerBound:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC3
+    signal: NominalFrictionPercentTorque
+    metadata:
+      matching:
+        score: 0.4927
+Vehicle.ADAS.ESC.RoadFriction.UpperBound:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS21
+    signal: Wheel_BasedVehicleSpeed
+    metadata:
+      matching:
+        score: 0.4777
+Vehicle.ADAS.EBD.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: RemoteAccelEnableSwitch
+    metadata:
+      matching:
+        score: 0.6512
+Vehicle.ADAS.EBD.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: EBSRedWarningSignal
+    metadata:
+      matching:
+        score: 0.6203
+Vehicle.ADAS.EBD.IsEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS22
+    signal: SpringBrakeEngaged
+    metadata:
+      matching:
+        score: 0.5751
+Vehicle.ADAS.EBA.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: RemoteAccelEnableSwitch
+    metadata:
+      matching:
+        score: 0.6401
+Vehicle.ADAS.EBA.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: EBSRedWarningSignal
+    metadata:
+      matching:
+        score: 0.6541
+Vehicle.ADAS.EBA.IsEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: EBSBrakeSwitch
+    metadata:
+      matching:
+        score: 0.6029
+Vehicle.ADAS.DMS.IsEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TC1
+    signal: TransMode1
+    metadata:
+      matching:
+        score: 0.5551
+Vehicle.ADAS.DMS.IsWarning:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM22
+    signal: ODDStatus
+    metadata:
+      matching:
+        score: 0.5646
+Vehicle.ADAS.DMS.IsError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM32
+    signal: FailureModeIdentifier1
+    metadata:
+      matching:
+        score: 0.5534
+Vehicle.ADAS.PowerOptimizeLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LOI
+    signal: RghtBldeCtrlModeOperatorControl
+    metadata:
+      matching:
+        score: 0.4945
+Vehicle.Chassis.Wheelbase:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESC1
+    signal: AxleLocation
+    metadata:
+      matching:
+        score: 0.4772
+Vehicle.Chassis.Axle.Row1.TreadWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC4
+    signal: BrkLnngRmnngRearAxle2RightWheel
+    metadata:
+      matching:
+        score: 0.4972
+Vehicle.Chassis.Axle.Row1.TrackWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleLeftWheelSpeed
+    metadata:
+      matching:
+        score: 0.5149
+Vehicle.Chassis.Axle.Row1.AxleWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AI
+    signal: DriveAxleLocation
+    metadata:
+      matching:
+        score: 0.5410
+Vehicle.Chassis.Axle.Row1.WheelCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESC1
+    signal: StatusOfSteerAxle
+    metadata:
+      matching:
+        score: 0.5347
+Vehicle.Chassis.Axle.Row1.WheelDiameter:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleLeftWheelSpeed
+    metadata:
+      matching:
+        score: 0.4722
+Vehicle.Chassis.Axle.Row1.WheelWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreWheelIdentification1
+    metadata:
+      matching:
+        score: 0.5010
+Vehicle.Chassis.Axle.Row1.SteeringAngle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESC1
+    signal: ActualInnerWheelSteerAngle
+    metadata:
+      matching:
+        score: 0.6710
+Vehicle.Chassis.Axle.Row1.TireDiameter:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS23
+    signal: TyreWheelIdentLining1
+    metadata:
+      matching:
+        score: 0.4959
+Vehicle.Chassis.Axle.Row1.TireWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS23
+    signal: TyreWheelIdentLining1
+    metadata:
+      matching:
+        score: 0.5304
+Vehicle.Chassis.Axle.Row1.TireAspectRatio:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleRightWheelSpeed
+    metadata:
+      matching:
+        score: 0.4826
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Brake.FluidLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HBS
+    signal: HydBrakeFluidLevelSwitch
+    metadata:
+      matching:
+        score: 0.5981
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Brake.IsFluidLevelLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HBS
+    signal: HydBrakeFluidLevelSwitch
+    metadata:
+      matching:
+        score: 0.6490
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Brake.PadWear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC4
+    signal: BrkLnngRmningRearAxle2LeftWheel
+    metadata:
+      matching:
+        score: 0.5303
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Brake.IsBrakesWorn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: B
+    signal: ParkingBrakeActuator
+    metadata:
+      matching:
+        score: 0.5236
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Tire.Pressure:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TP2
+    signal: DriveChannelTirePressTarget
+    metadata:
+      matching:
+        score: 0.7307
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Tire.IsPressureLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TIRE
+    signal: TirePressThresholdDetection_10
+    metadata:
+      matching:
+        score: 0.7063
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Tire.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreTemperature
+    metadata:
+      matching:
+        score: 0.7701
+Vehicle.Chassis.Axle.Row1.Wheel.Left.Speed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleLeftWheelSpeed
+    metadata:
+      matching:
+        score: 0.6857
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Brake.FluidLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HBS
+    signal: HydBrakeFluidLevelSwitch
+    metadata:
+      matching:
+        score: 0.5981
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Brake.IsFluidLevelLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HBS
+    signal: HydBrakeFluidLevelSwitch
+    metadata:
+      matching:
+        score: 0.6490
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Brake.PadWear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC4
+    signal: BrkLnngRmningRearAxle2LeftWheel
+    metadata:
+      matching:
+        score: 0.5303
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Brake.IsBrakesWorn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: B
+    signal: ParkingBrakeActuator
+    metadata:
+      matching:
+        score: 0.5236
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Tire.Pressure:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TP2
+    signal: DriveChannelTirePressTarget
+    metadata:
+      matching:
+        score: 0.7307
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Tire.IsPressureLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TIRE
+    signal: TirePressThresholdDetection_10
+    metadata:
+      matching:
+        score: 0.7063
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Tire.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreTemperature
+    metadata:
+      matching:
+        score: 0.7701
+Vehicle.Chassis.Axle.Row1.Wheel.Right.Speed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleRightWheelSpeed
+    metadata:
+      matching:
+        score: 0.6826
+Vehicle.Chassis.Axle.Row2.TreadWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC4
+    signal: BrkLnngRmnngRearAxle2RightWheel
+    metadata:
+      matching:
+        score: 0.5020
+Vehicle.Chassis.Axle.Row2.TrackWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleLeftWheelSpeed
+    metadata:
+      matching:
+        score: 0.5170
+Vehicle.Chassis.Axle.Row2.AxleWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleLeftWheelSpeed
+    metadata:
+      matching:
+        score: 0.5365
+Vehicle.Chassis.Axle.Row2.WheelCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreWheelIdentification2
+    metadata:
+      matching:
+        score: 0.5370
+Vehicle.Chassis.Axle.Row2.WheelDiameter:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleLeftWheelSpeed
+    metadata:
+      matching:
+        score: 0.4712
+Vehicle.Chassis.Axle.Row2.WheelWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS23
+    signal: TyreWheelIdentLining2
+    metadata:
+      matching:
+        score: 0.4912
+Vehicle.Chassis.Axle.Row2.SteeringAngle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESC1
+    signal: ActualInnerWheelSteerAngle
+    metadata:
+      matching:
+        score: 0.6688
+Vehicle.Chassis.Axle.Row2.TireDiameter:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS23
+    signal: TyreWheelIdentLining2
+    metadata:
+      matching:
+        score: 0.4911
+Vehicle.Chassis.Axle.Row2.TireWidth:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS23
+    signal: TyreWheelIdentLining2
+    metadata:
+      matching:
+        score: 0.5292
+Vehicle.Chassis.Axle.Row2.TireAspectRatio:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleRightWheelSpeed
+    metadata:
+      matching:
+        score: 0.4876
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Brake.FluidLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HBS
+    signal: HydBrakeFluidLevelSwitch
+    metadata:
+      matching:
+        score: 0.5981
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Brake.IsFluidLevelLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HBS
+    signal: HydBrakeFluidLevelSwitch
+    metadata:
+      matching:
+        score: 0.6490
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Brake.PadWear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC4
+    signal: BrkLnngRmningRearAxle2LeftWheel
+    metadata:
+      matching:
+        score: 0.5303
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Brake.IsBrakesWorn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: B
+    signal: ParkingBrakeActuator
+    metadata:
+      matching:
+        score: 0.5236
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Tire.Pressure:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TP2
+    signal: DriveChannelTirePressTarget
+    metadata:
+      matching:
+        score: 0.7307
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Tire.IsPressureLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TIRE
+    signal: TirePressThresholdDetection_10
+    metadata:
+      matching:
+        score: 0.7063
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Tire.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreTemperature
+    metadata:
+      matching:
+        score: 0.7701
+Vehicle.Chassis.Axle.Row2.Wheel.Left.Speed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleLeftWheelSpeed
+    metadata:
+      matching:
+        score: 0.6857
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Brake.FluidLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HBS
+    signal: HydBrakeFluidLevelSwitch
+    metadata:
+      matching:
+        score: 0.5981
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Brake.IsFluidLevelLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HBS
+    signal: HydBrakeFluidLevelSwitch
+    metadata:
+      matching:
+        score: 0.6490
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Brake.PadWear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC4
+    signal: BrkLnngRmningRearAxle2LeftWheel
+    metadata:
+      matching:
+        score: 0.5303
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Brake.IsBrakesWorn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: B
+    signal: ParkingBrakeActuator
+    metadata:
+      matching:
+        score: 0.5236
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Tire.Pressure:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TP2
+    signal: DriveChannelTirePressTarget
+    metadata:
+      matching:
+        score: 0.7307
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Tire.IsPressureLow:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TIRE
+    signal: TirePressThresholdDetection_10
+    metadata:
+      matching:
+        score: 0.7063
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Tire.Temperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: RGE23
+    signal: TyreTemperature
+    metadata:
+      matching:
+        score: 0.7701
+Vehicle.Chassis.Axle.Row2.Wheel.Right.Speed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: HRW
+    signal: RearAxleRightWheelSpeed
+    metadata:
+      matching:
+        score: 0.6826
+Vehicle.Chassis.AxleCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AI
+    signal: DriveAxleLocation
+    metadata:
+      matching:
+        score: 0.6686
+Vehicle.Chassis.ParkingBrake.IsEngaged:
+  type: sensor
+  datatype: float
+  dbc:
+    message: B
+    signal: ParkingBrakeRedWarningSignal
+    metadata:
+      matching:
+        score: 0.5872
+Vehicle.Chassis.ParkingBrake.IsAutoApplyEnabled:
+  type: sensor
+  datatype: float
+  dbc:
+    message: B
+    signal: ParkingBrakeActuator
+    metadata:
+      matching:
+        score: 0.5481
+Vehicle.Chassis.SteeringWheel.Angle:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESC1
+    signal: ActualInnerWheelSteerAngle
+    metadata:
+      matching:
+        score: 0.7306
+Vehicle.Chassis.SteeringWheel.Tilt:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerWheelAngleRangeCounterType
+    metadata:
+      matching:
+        score: 0.6315
+Vehicle.Chassis.SteeringWheel.Extension:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SAS
+    signal: SteerWheelAngleRangeCounter
+    metadata:
+      matching:
+        score: 0.5283
+Vehicle.Chassis.Accelerator.PedalPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: GPM14
+    signal: AccelPedalPosition
+    metadata:
+      matching:
+        score: 0.5777
+Vehicle.Chassis.Brake.PedalPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBC1
+    signal: BrakePedalPos
+    metadata:
+      matching:
+        score: 0.6115
+Vehicle.Chassis.Brake.IsDriverEmergencyBrakingDetected:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EBS21
+    signal: VehicleServiceBrakeActive
+    metadata:
+      matching:
+        score: 0.5441
+Vehicle.OBD.PidsA:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.4223
+Vehicle.OBD.PidsB:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.4094
+Vehicle.OBD.PidsC:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.4117
+Vehicle.OBD.Status.IsMILOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM1
+    signal: FlashMalfuncIndicatorLamp
+    metadata:
+      matching:
+        score: 0.5973
+Vehicle.OBD.Status.DTCCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM2
+    signal: DTC1
+    metadata:
+      matching:
+        score: 0.7059
+Vehicle.OBD.Status.IgnitionType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCS
+    signal: EngCyl19CombustionStatus
+    metadata:
+      matching:
+        score: 0.5404
+Vehicle.OBD.DTCList:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM29
+    signal: PermanentDTCs
+    metadata:
+      matching:
+        score: 0.5673
+Vehicle.OBD.FreezeDTC:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM25
+    signal: DTC1
+    metadata:
+      matching:
+        score: 0.5920
+Vehicle.OBD.FuelStatus:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD2
+    signal: VehicleFuelLevelLowLampData
+    metadata:
+      matching:
+        score: 0.5525
+Vehicle.OBD.EngineLoad:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM4
+    signal: EngPercentLoadAtCurrentSpeed
+    metadata:
+      matching:
+        score: 0.5033
+Vehicle.OBD.CoolantTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ET4
+    signal: EngCoolantTemp2
+    metadata:
+      matching:
+        score: 0.5354
+Vehicle.OBD.ShortTermFuelTrim1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6974
+Vehicle.OBD.LongTermFuelTrim1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: LongtermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6700
+Vehicle.OBD.ShortTermFuelTrim2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.7122
+Vehicle.OBD.LongTermFuelTrim2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: LongtermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6699
+Vehicle.OBD.FuelPressure:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1FC1
+    signal: Aftertreatment1FuelPress1
+    metadata:
+      matching:
+        score: 0.6029
+Vehicle.OBD.MAP:
+  type: sensor
+  datatype: float
+  dbc:
+    message: IC1
+    signal: EngIntakeManifold1Press
+    metadata:
+      matching:
+        score: 0.7030
+Vehicle.OBD.EngineSpeed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESSI
+    signal: EngSpeed3
+    metadata:
+      matching:
+        score: 0.6273
+Vehicle.OBD.Speed:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESSI
+    signal: EngSpeed1
+    metadata:
+      matching:
+        score: 0.5572
+Vehicle.OBD.TimingAdvance:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM20
+    signal: OBDMonitoringCondEncountered
+    metadata:
+      matching:
+        score: 0.5796
+Vehicle.OBD.IntakeTemp:
+  type: sensor
+  datatype: float
+  dbc:
+    message: IMT2
+    signal: EngIntakeManifold6Temp
+    metadata:
+      matching:
+        score: 0.6408
+Vehicle.OBD.MAF:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EGF1
+    signal: EngIntakeAirMassFlowRate
+    metadata:
+      matching:
+        score: 0.5448
+Vehicle.OBD.ThrottlePosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TFAC
+    signal: EngThrottleActuator1CtrlCmd
+    metadata:
+      matching:
+        score: 0.5801
+Vehicle.OBD.AirStatus:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: SecondAirSystemMonStatus
+    metadata:
+      matching:
+        score: 0.5413
+Vehicle.OBD.OxygenSensorsIn2Banks:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: EngExhstGsOxygnSnsrClsdLpOprtnBnk2
+    metadata:
+      matching:
+        score: 0.5240
+Vehicle.OBD.O2.Sensor1.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage1
+    metadata:
+      matching:
+        score: 0.6227
+Vehicle.OBD.O2.Sensor1.ShortTermFuelTrim:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6241
+Vehicle.OBD.O2.Sensor2.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage2
+    metadata:
+      matching:
+        score: 0.6230
+Vehicle.OBD.O2.Sensor2.ShortTermFuelTrim:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6223
+Vehicle.OBD.O2.Sensor3.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage3
+    metadata:
+      matching:
+        score: 0.6056
+Vehicle.OBD.O2.Sensor3.ShortTermFuelTrim:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6087
+Vehicle.OBD.O2.Sensor4.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage4
+    metadata:
+      matching:
+        score: 0.6246
+Vehicle.OBD.O2.Sensor4.ShortTermFuelTrim:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6102
+Vehicle.OBD.O2.Sensor5.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage1
+    metadata:
+      matching:
+        score: 0.5927
+Vehicle.OBD.O2.Sensor5.ShortTermFuelTrim:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6027
+Vehicle.OBD.O2.Sensor6.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP2
+    signal: SensorSupplyVoltage6
+    metadata:
+      matching:
+        score: 0.5993
+Vehicle.OBD.O2.Sensor6.ShortTermFuelTrim:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6013
+Vehicle.OBD.O2.Sensor7.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP2
+    signal: SensorSupplyVoltage7
+    metadata:
+      matching:
+        score: 0.6207
+Vehicle.OBD.O2.Sensor7.ShortTermFuelTrim:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6064
+Vehicle.OBD.O2.Sensor8.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP2
+    signal: SensorSupplyVoltage8
+    metadata:
+      matching:
+        score: 0.5907
+Vehicle.OBD.O2.Sensor8.ShortTermFuelTrim:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT1
+    signal: ShorttermFuelTrimBank1
+    metadata:
+      matching:
+        score: 0.6077
+Vehicle.OBD.OBDStandards:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: OBDCompliance
+    metadata:
+      matching:
+        score: 0.6230
+Vehicle.OBD.OxygenSensorsIn4Banks:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: OxygenSensorMonSupp
+    metadata:
+      matching:
+        score: 0.4735
+Vehicle.OBD.IsPTOActive:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.5513
+Vehicle.OBD.RunTime:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM33
+    signal: AECDEngineHours1Timer1
+    metadata:
+      matching:
+        score: 0.5398
+Vehicle.OBD.DistanceWithMIL:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM21
+    signal: DistanceWhileMILisActivated
+    metadata:
+      matching:
+        score: 0.5879
+Vehicle.OBD.FuelRailPressureVac:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AP
+    signal: AuxVacuumPressReading
+    metadata:
+      matching:
+        score: 0.5555
+Vehicle.OBD.FuelRailPressureDirect:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EFL_P2
+    signal: EngInjectorMeteringRail2Press
+    metadata:
+      matching:
+        score: 0.6143
+Vehicle.OBD.O2WR.Sensor1.Lambda:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.3958
+Vehicle.OBD.O2WR.Sensor1.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage2
+    metadata:
+      matching:
+        score: 0.4837
+Vehicle.OBD.O2WR.Sensor1.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: OxygenSensorMonComplete
+    metadata:
+      matching:
+        score: 0.3775
+Vehicle.OBD.O2WR.Sensor2.Lambda:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.3859
+Vehicle.OBD.O2WR.Sensor2.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage2
+    metadata:
+      matching:
+        score: 0.4886
+Vehicle.OBD.O2WR.Sensor2.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: OxygenSensorMonComplete
+    metadata:
+      matching:
+        score: 0.3716
+Vehicle.OBD.O2WR.Sensor3.Lambda:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: OxygenSensorMonComplete
+    metadata:
+      matching:
+        score: 0.3862
+Vehicle.OBD.O2WR.Sensor3.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage3
+    metadata:
+      matching:
+        score: 0.4777
+Vehicle.OBD.O2WR.Sensor3.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage3
+    metadata:
+      matching:
+        score: 0.3908
+Vehicle.OBD.O2WR.Sensor4.Lambda:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: OxygenSensorMonComplete
+    metadata:
+      matching:
+        score: 0.3808
+Vehicle.OBD.O2WR.Sensor4.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage4
+    metadata:
+      matching:
+        score: 0.5025
+Vehicle.OBD.O2WR.Sensor4.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP1
+    signal: SensorSupplyVoltage4
+    metadata:
+      matching:
+        score: 0.3819
+Vehicle.OBD.O2WR.Sensor5.Lambda:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.3840
+Vehicle.OBD.O2WR.Sensor5.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP2
+    signal: SensorSupplyVoltage5
+    metadata:
+      matching:
+        score: 0.5106
+Vehicle.OBD.O2WR.Sensor5.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: OxygenSensorMonComplete
+    metadata:
+      matching:
+        score: 0.3755
+Vehicle.OBD.O2WR.Sensor6.Lambda:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.3907
+Vehicle.OBD.O2WR.Sensor6.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP2
+    signal: SensorSupplyVoltage6
+    metadata:
+      matching:
+        score: 0.5085
+Vehicle.OBD.O2WR.Sensor6.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: OxygenSensorMonComplete
+    metadata:
+      matching:
+        score: 0.3766
+Vehicle.OBD.O2WR.Sensor7.Lambda:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.3896
+Vehicle.OBD.O2WR.Sensor7.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP2
+    signal: SensorSupplyVoltage7
+    metadata:
+      matching:
+        score: 0.5218
+Vehicle.OBD.O2WR.Sensor7.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: OxygenSensorMonComplete
+    metadata:
+      matching:
+        score: 0.3765
+Vehicle.OBD.O2WR.Sensor8.Lambda:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.3882
+Vehicle.OBD.O2WR.Sensor8.Voltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SEP2
+    signal: SensorSupplyVoltage8
+    metadata:
+      matching:
+        score: 0.4940
+Vehicle.OBD.O2WR.Sensor8.Current:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: OxygenSensorMonComplete
+    metadata:
+      matching:
+        score: 0.3793
+Vehicle.OBD.CommandedEGR:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC10
+    signal: EngExhstGsRcrcltn2ClrIntakeTemp
+    metadata:
+      matching:
+        score: 0.6109
+Vehicle.OBD.EGRError:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC10
+    signal: EngExhstGsRcrcltn2ClrIntakeTemp
+    metadata:
+      matching:
+        score: 0.5232
+Vehicle.OBD.CommandedEVAP:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: EvaporativeSystemMonSupp
+    metadata:
+      matching:
+        score: 0.5370
+Vehicle.OBD.FuelLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DD
+    signal: FuelLevel1
+    metadata:
+      matching:
+        score: 0.5519
+Vehicle.OBD.WarmupsSinceDTCClear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM26
+    signal: NumOfWarmUpsSinceDTCsCleared
+    metadata:
+      matching:
+        score: 0.6117
+Vehicle.OBD.DistanceSinceDTCClear:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM21
+    signal: DistanceSinceDTCsCleared
+    metadata:
+      matching:
+        score: 0.6364
+Vehicle.OBD.EVAPVaporPressure:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: EvaporativeSystemMonSupp
+    metadata:
+      matching:
+        score: 0.5431
+Vehicle.OBD.BarometricPressure:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: BarometricPress
+    metadata:
+      matching:
+        score: 0.5507
+Vehicle.OBD.Catalyst.Bank1.Temperature1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1TWCC
+    signal: Aftrtrtmnt1ThrWyCtlytcCnvrtrIntkGsTmp
+    metadata:
+      matching:
+        score: 0.5290
+Vehicle.OBD.Catalyst.Bank1.Temperature2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAI
+    signal: EngExhaustGasTempAverageBank2
+    metadata:
+      matching:
+        score: 0.5262
+Vehicle.OBD.Catalyst.Bank2.Temperature1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAI
+    signal: EngExhaustGasTempAverageBank2
+    metadata:
+      matching:
+        score: 0.5113
+Vehicle.OBD.Catalyst.Bank2.Temperature2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EAI
+    signal: EngExhaustGasTempAverageBank2
+    metadata:
+      matching:
+        score: 0.5504
+Vehicle.OBD.DriveCycleStatus.IsMILOn:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM21
+    signal: MinutesRunByEngineMILActivated
+    metadata:
+      matching:
+        score: 0.5393
+Vehicle.OBD.DriveCycleStatus.DTCCount:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM29
+    signal: PendingDTCs
+    metadata:
+      matching:
+        score: 0.6059
+Vehicle.OBD.DriveCycleStatus.IgnitionType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: CCS
+    signal: EngCyl23CombustionStatus
+    metadata:
+      matching:
+        score: 0.5568
+Vehicle.OBD.ControlModuleVoltage:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.5127
+Vehicle.OBD.AbsoluteLoad:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD1
+    signal: OBDMalfunctionIndicatorLampData
+    metadata:
+      matching:
+        score: 0.5274
+Vehicle.OBD.CommandedEquivalenceRatio:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: OBDCompliance
+    metadata:
+      matching:
+        score: 0.5136
+Vehicle.OBD.RelativeThrottlePosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EngFelThrottleValveInformation
+    signal: EngDesiredThrottleValve1Pos
+    metadata:
+      matching:
+        score: 0.5488
+Vehicle.OBD.AmbientAirTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.6645
+Vehicle.OBD.ThrottlePositionB:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EngFelThrottleValveInformation
+    signal: EngDesiredThrottleValve2Pos
+    metadata:
+      matching:
+        score: 0.5258
+Vehicle.OBD.ThrottlePositionC:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EngFelThrottleValveInformation
+    signal: EngDesiredThrottleValve1Pos
+    metadata:
+      matching:
+        score: 0.5395
+Vehicle.OBD.AcceleratorPositionD:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC2
+    signal: AccelPedalPos1
+    metadata:
+      matching:
+        score: 0.5886
+Vehicle.OBD.AcceleratorPositionE:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC2
+    signal: AccelPedalPos1
+    metadata:
+      matching:
+        score: 0.6277
+Vehicle.OBD.AcceleratorPositionF:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC2
+    signal: AccelPedalPos1
+    metadata:
+      matching:
+        score: 0.5978
+Vehicle.OBD.ThrottleActuator:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TFAC
+    signal: EngThrottleActuator1CtrlCmd
+    metadata:
+      matching:
+        score: 0.5374
+Vehicle.OBD.RunTimeMIL:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM20
+    signal: OBDMonitoringCondEncountered
+    metadata:
+      matching:
+        score: 0.4766
+Vehicle.OBD.TimeSinceDTCCleared:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM21
+    signal: TimeSinceDTCsCleared
+    metadata:
+      matching:
+        score: 0.5984
+Vehicle.OBD.MaxMAF:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1AC2
+    signal: Aftrtreatment1SecondAirMassFlow
+    metadata:
+      matching:
+        score: 0.5082
+Vehicle.OBD.FuelType:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DLCD2
+    signal: VehicleFuelLevelLowLampData
+    metadata:
+      matching:
+        score: 0.5352
+Vehicle.OBD.EthanolPercent:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFI
+    signal: FlexibleFuelPercentage
+    metadata:
+      matching:
+        score: 0.5932
+Vehicle.OBD.EVAPVaporPressureAbsolute:
+  type: sensor
+  datatype: float
+  dbc:
+    message: DM5
+    signal: EvaporativeSystemMonSupp
+    metadata:
+      matching:
+        score: 0.5408
+Vehicle.OBD.EVAPVaporPressureAlternate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1AC1
+    signal: Aftertreatment1PurgeAirPress
+    metadata:
+      matching:
+        score: 0.5290
+Vehicle.OBD.ShortTermO2Trim1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: ShorttermFuelTrimBank2
+    metadata:
+      matching:
+        score: 0.5504
+Vehicle.OBD.ShortTermO2Trim3:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: ShorttermFuelTrimBank2
+    metadata:
+      matching:
+        score: 0.5270
+Vehicle.OBD.LongTermO2Trim1:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: LongtermFuelTrimBank2
+    metadata:
+      matching:
+        score: 0.5266
+Vehicle.OBD.LongTermO2Trim3:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: LongtermFuelTrimBank2
+    metadata:
+      matching:
+        score: 0.5090
+Vehicle.OBD.ShortTermO2Trim2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: ShorttermFuelTrimBank2
+    metadata:
+      matching:
+        score: 0.5371
+Vehicle.OBD.ShortTermO2Trim4:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: ShorttermFuelTrimBank2
+    metadata:
+      matching:
+        score: 0.5293
+Vehicle.OBD.LongTermO2Trim2:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: LongtermFuelTrimBank2
+    metadata:
+      matching:
+        score: 0.5242
+Vehicle.OBD.LongTermO2Trim4:
+  type: sensor
+  datatype: float
+  dbc:
+    message: O2FT2
+    signal: LongtermFuelTrimBank2
+    metadata:
+      matching:
+        score: 0.5153
+Vehicle.OBD.FuelRailPressureAbsolute:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AT1FC2
+    signal: Aftertreatment1FuelPress2
+    metadata:
+      matching:
+        score: 0.5709
+Vehicle.OBD.RelativeAcceleratorPosition:
+  type: sensor
+  datatype: float
+  dbc:
+    message: EEC2
+    signal: RemoteAccelPedalPos
+    metadata:
+      matching:
+        score: 0.6223
+Vehicle.OBD.HybridBatteryRemaining:
+  type: sensor
+  datatype: float
+  dbc:
+    message: VEP4
+    signal: HybrdBatteryPackRemainingCharge
+    metadata:
+      matching:
+        score: 0.4804
+Vehicle.OBD.OilTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ET1
+    signal: EngOilTemp1
+    metadata:
+      matching:
+        score: 0.6669
+Vehicle.OBD.FuelInjectionTiming:
+  type: sensor
+  datatype: float
+  dbc:
+    message: IT6
+    signal: EngDesiredIgntTiming1
+    metadata:
+      matching:
+        score: 0.5644
+Vehicle.OBD.FuelRate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LFE
+    signal: EngFuelRate
+    metadata:
+      matching:
+        score: 0.5647
+Vehicle.Driver.Identifier.Subject:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ATR
+    signal: AntitheftPasswordRepresentation
+    metadata:
+      matching:
+        score: 0.3713
+Vehicle.Driver.Identifier.Issuer:
+  type: sensor
+  datatype: float
+  dbc:
+    message: FMS
+    signal: FMSstandardSWversionSupported
+    metadata:
+      matching:
+        score: 0.3573
+Vehicle.Driver.DistractionLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: Driver1TimeRelatedStates
+    metadata:
+      matching:
+        score: 0.4295
+Vehicle.Driver.IsEyesOnRoad:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: DriverCardDriver1
+    metadata:
+      matching:
+        score: 0.4257
+Vehicle.Driver.IsHandsOnWheel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: ESC1
+    signal: AxleLocation
+    metadata:
+      matching:
+        score: 0.5988
+Vehicle.Driver.AttentiveProbability:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: DriverCardDriver2
+    metadata:
+      matching:
+        score: 0.4779
+Vehicle.Driver.FatigueLevel:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: Driver1TimeRelatedStates
+    metadata:
+      matching:
+        score: 0.4737
+Vehicle.Driver.HeartRate:
+  type: sensor
+  datatype: float
+  dbc:
+    message: TCO1
+    signal: DriverCardDriver2
+    metadata:
+      matching:
+        score: 0.4934
+Vehicle.Exterior.AirTemperature:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB
+    signal: AmbientAirTemp
+    metadata:
+      matching:
+        score: 0.7212
+Vehicle.Exterior.Humidity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: AMB2
+    signal: SpecificHumidity
+    metadata:
+      matching:
+        score: 0.5849
+Vehicle.Exterior.LightIntensity:
+  type: sensor
+  datatype: float
+  dbc:
+    message: LD
+    signal: RunningLight
+    metadata:
+      matching:
+        score: 0.6054
+Vehicle.Service.IsServiceDue:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SERV
+    signal: ServiceDelay_CalendarTimeBased
+    metadata:
+      matching:
+        score: 0.5049
+Vehicle.Service.DistanceToService:
+  type: sensor
+  datatype: float
+  dbc:
+    message: SERV
+    signal: ServiceDistance
+    metadata:
+      matching:
+        score: 0.5232
+Vehicle.Service.TimeToService:
+  type: sensor
+  datatype: float
+  dbc:
+    message: S2
+    signal: TimeSinceLastService
+    metadata:
+      matching:
+        score: 0.5478
+Vehicle.Connectivity.IsConnectivityAvailable:
+  type: sensor
+  datatype: float
+  dbc:
+    message: WCM2
+    signal: NetworkServiceStatus2
+    metadata:
+      matching:
+        score: 0.4751

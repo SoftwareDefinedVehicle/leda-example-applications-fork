@@ -5,4 +5,6 @@ python3 ./dbcinfo.py \
     -u vehicle_signal_specification/spec/units.yaml \
     -o custom.vspec \
     --extended-attributes dbc \
-    vehicle_signal_specification/spec/VehicleSignalSpecification.vspec 
+    --vspec-file vehicle_signal_specification/spec/VehicleSignalSpecification.vspec \
+    --dbc-file j1939.dbc \
+    --output-vspec-file out-mapping.vspec
