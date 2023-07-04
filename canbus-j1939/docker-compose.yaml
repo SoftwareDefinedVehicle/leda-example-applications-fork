@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  databroker:
+    image: ghcr.io/eclipse/kuksa.val/databroker:latest
+    network_mode: host
+  dbc2val:
+    #image: ghcr.io/eclipse/kuksa.val.feeders/dbc2val:main
+    build:
+      context: ./kuksa.val.feeders/dbc2val
+      #context: https://github.com/eclipse/kuksa.val.feeders/tree/main/dbc2val
+    network_mode: host
+    privileged: true
+    volumes:
+      - ./dockerfiles/dbc_feeder.ini:/config/dbc_feeder.ini
+      - ./j1939.dbc:/dbc2val/j1939.dbc
+      - ./custom_vss_dbc.json:/dbc2val/custom_vss_dbc.json
+      - ./dockerfiles/candump-2021-10-14_234124.log:/dbc2val/candump.log

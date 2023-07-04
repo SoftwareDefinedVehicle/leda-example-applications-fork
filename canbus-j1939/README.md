@@ -7,7 +7,7 @@ The goal of this example use case is to show
 
 ## Architecture Overview
 
-- dbc2val container, configurable with new custom DBC + Mapping file
+- dbc2val container, configurable with new custom DBC + Mapping files
 - mock for providing simulated J1939 signals on CAN-Bus
 - Velocitas app accessing J1939 information and providing it as a service to remote cloud services
 
@@ -22,6 +22,21 @@ After modifying custom.vspec and custom.dbc, regenerate the resulting VSS model:
 
 ```shell
 docker run --name vspec2json --rm -v `pwd`:/data ghcr.io/eclipse-leda/leda-vss-vspec2json:main
+```
+
+## Auto-generated mapping
+
+For quick experiments, it may be easier to auto-generate a mapping.
+Use the `run.sh` script to (re-)generate the mapping.
+
+> *Attention:* The generated mappings are **proposals only**. They may match on name and unit/datatype,
+but there is only a small chance that they actually match semantically! Do NOT use the generated mappings
+for actual vehicle signals. **This is dummy data for simulation, testing and mocking purposes only.**
+
+## Databroker CLI
+
+```shell
+docker run it --rm ghcr.io/eclipse/kuksa.val/databroker-cli:master
 ```
 
 ### References

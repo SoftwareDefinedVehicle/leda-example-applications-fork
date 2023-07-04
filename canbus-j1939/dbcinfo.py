@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # python3 -m pip install cantools
 # python3 -m pip install vss-tools
 # python3 -m pip install tensorflow --no-cache-dir
@@ -19,15 +20,12 @@ import itertools
 import os
 import re
 import torch
-logging.info("Importing modules...Tensorflow")
-
-#import tensorflow as tf
+import yaml
+import pickle
+from anytree import AnyNode
+from anytree.exporter import DictExporter
 import tensorflow_hub as hub
-#import tensorflow_text as text
 import numpy as np
-
-logging.info("Importing modules...Rest")
-#from gensim import corpora, models, similarities, downloader
 from collections.abc import Iterable
 from collections import defaultdict
 from pprint import pprint
@@ -38,7 +36,7 @@ from vspec.model.vsstree import VSSNode
 from vspec.model.constants import VSSTreeType
 from vspec.loggingconfig import initLogging
 from cantools.database import Database, Message, Signal
-
+from typing import Dict, Any
 from sentence_transformers import SentenceTransformer, util
 
 import vspec
@@ -50,130 +48,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-
-@dataclass(eq=False, unsafe_hash=True)
-@total_ordering
-class Similarity():
-    """Collect weighted similarities"""
-
-    can_message: Message
-    can_signal: Signal
-    vss_signal: VSSNode
-
-    similarity_unit: float = 0.0
-    similarity_signal_name: float = 0.0
-    similarity_parent_name: float = 0.0
-    similarity_signal_description: float = 0.0
-    similarity_parent_description: float = 0.0
-    similarity_minmax_values: float = 0.0
-
-    weight_unit: float = 1.0
-    weight_signal_name: float = 1.0
-    weight_parent_name: float = 0.5
-    weight_signal_description: float = 0.7
-    weight_parent_description: float = 0.3
-    weight_minmax_values: float = 1.0
-
-    def __post_init__(self):
-        self.similarity_unit = self.compare_units()
-
-        self.similarity_signal_description = self.jaccard_similarity(self.can_signal.comment,
-                                                                     self.vss_signal.description)
-
-        if self.vss_signal.parent is not None:
-            self.similarity_parent_description = self.jaccard_similarity(self.can_message.comment,
-                                                                         self.vss_signal.parent.description)
-
-        self.similarity_minmax_values = (self.jaccard_similarity(self.can_signal.minimum,
-                                                                 self.vss_signal.min) +
-                                         self.jaccard_similarity(self.can_signal.maximum,
-                                                                 self.vss_signal.max))/2
-
-        self.similarity_signal_name = self.jaccard_similarity(self.can_message.name,
-                                                              self.vss_signal.qualified_name())
-
-        if self.vss_signal.parent is not None:
-            self.similarity_parent_name = self.jaccard_similarity(self.can_signal.name,
-                                                                  self.vss_signal.parent.qualified_name())
-
-    def total_similarity(self) -> float:
-        """Calculated the total similarity of the DBC and the VSS element"""
-        return ((self.similarity_unit * self.weight_unit)
-                + (self.similarity_signal_description *
-                   self.weight_signal_description)
-                + (self.similarity_parent_description *
-                   self.weight_parent_description)
-                + (self.similarity_minmax_values * self.weight_minmax_values)
-                + (self.similarity_signal_name * self.weight_signal_name)
-                + (self.similarity_parent_name * self.weight_parent_name)) / 6
-
-    def __eq__(self, other):
-        return self.total_similarity() == other.total_similarity()
-
-    def __lt__(self, other):
-        return self.total_similarity() < other.total_similarity()
-
-    def __gt__(self, other):
-        return self.total_similarity() > other.total_similarity()
-
-    def compare_units(self) -> float:
-        """Compare units, such as km/h or m/s/s"""
-        if self.can_signal.unit is None:
-            return 0
-        if self.vss_signal.unit is None:
-            return 0
-        if self.can_signal.unit is not None:
-            if self.vss_signal.unit is not None:
-                if (self.can_signal.unit == "m/s/s") & (self.vss_signal.unit.label == "m/s^2"):
-                    return 1
-        return self.can_signal.unit == self.vss_signal.unit
-
-    @staticmethod
-    def jaccard_similarity(first, second) -> float:
-        """ returns the jaccard similarity between two lists """
-
-        if first is None:
-            return 0
-
-        if second is None:
-            return 0
-
-        if first == second:
-            return 1
-
-        # Equality has already been checked.
-        # If it's a number, it's not similar, so we return 0 as similarity.
-        if isinstance(first, int) or isinstance(second, int):
-            return 0
-        if isinstance(first, float) or isinstance(second, float):
-            return 0
-
-        if isinstance(first, numbers.Number):
-            if isinstance(second, numbers.Number):
-                return abs(first.compare(second))
-
-        if not isinstance(first, Iterable):
-            raise ValueError(
-                f"First element is not an iterable: {first} of type {type(first)}")
-
-        if not isinstance(second, Iterable):
-            raise ValueError(
-                f"Second element is not an iterable: {second} of type {type(second)}")
-
-        intersection_cardinality = len(
-            set.intersection(*[set(first), set(second)]))
-        union_cardinality = len(set.union(*[set(first), set(second)]))
-        return intersection_cardinality/float(union_cardinality)
-
-
-# module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
-# model = hub.load(module_url)
-# print("module %s loaded" % module_url)
-
-# def embed(input):
-#     return model(input)
-
 def sentence_case(string):
+    """Convert a camel case signal name into separate words"""
     if string != '':
         result = re.sub('([A-Z])', r' \1', string)
         return result[:1].upper() + result[1:].lower()
@@ -182,17 +58,16 @@ def sentence_case(string):
 def semantic_similarity(data_base: Database,
                         tree: VSSNode,
                         output_vspec_file: str):
-    
+    """ Use NLP model to find DBC matches for each VSS datapoint"""
     # https://www.sbert.net/examples/applications/paraphrase-mining/README.html
     logging.info("Loading SentenceTransformer")
     model = SentenceTransformer('all-MiniLM-L6-v2')
 
-    # The corpus is the CAN Signals as describes 
+    # The corpus is the CAN Signals as describes
     corpus = []
     corpus_ids = []
     corpus_can_messages = []
     corpus_can_signals = []
-    can_message = data_base.get_message_by_name('ACC1')
     for can_message in data_base.messages:
         for can_signal in can_message.signals:
             logging.debug("CAN-Signal: {} : {}".format(can_signal.name, can_signal.comment))
@@ -201,170 +76,194 @@ def semantic_similarity(data_base: Database,
             corpus_ids.append(can_message.name + "." + can_signal.name)
             corpus_can_messages.append(can_message)
             corpus_can_signals.append(can_signal)
-    corpus_embeddings = model.encode(corpus, convert_to_tensor=True, show_progress_bar=True)
+
+    pickle_file = 'doc_embedding.pickle'
+    if os.path.isfile(pickle_file):
+        logging.info(f"Loading embeddings from persisted cache file {pickle_file}")
+        with open(pickle_file, 'rb') as pkl:
+            corpus_embeddings = pickle.load(pkl)
+    else:
+        corpus_embeddings = model.encode(corpus, convert_to_tensor=True, show_progress_bar=True)
+        logging.info(f"Storing embeddings to persistent cache file {pickle_file}")
+        with open(pickle_file, 'wb') as pkl:
+            pickle.dump(corpus_embeddings, pkl)
 
     #Compute embedding for both lists
     #embeddings1 = model.encode(sentences, convert_to_tensor=True, show_progress_bar=True)
     #query = ['Set cruise control speed in kilometers per hour.']
+
+    # Only use the best match by setting top_k to 1
+    # top_k = min(5, len(corpus))
+    top_k=10
     
-    f = open(output_vspec_file, "w")
-    
-    #top_k = min(5, len(corpus))
-    top_k=1
+    # Annotate the VSSTree with additional "DBC" information
+    vss_node : VSSNode
     for vss_node in PreOrderIter(tree):
         query = sentence_case(vss_node.name)
         query += " " + str(vss_node.description)
         if vss_node.parent:
             query += sentence_case(vss_node.parent.name)
             query += " " + str(vss_node.parent.description)
-        query_embedding = model.encode(query, convert_to_tensor=True)
+        query_embedding = model.encode(query, convert_to_tensor=True, show_progress_bar=False)
         cos_scores = util.cos_sim(query_embedding, corpus_embeddings)[0]
         
         good_results = torch.topk(cos_scores, k=top_k)
-        # print("======================")
-        # print("VSS Datapoint:", vss_node.qualified_name())
-        # print("Query Text:", query)
-        # print("\nTop 5 best matching CAN Signals:")
         for score, idx in zip(good_results[0], good_results[1]):
-            #print("\tMatch: {:.4f} {} - {}".format(score,corpus_ids[idx],corpus[idx]))
-            if not vss_node.is_branch():
-                f.writelines(vss_node.qualified_name() + ":" + "\n")
-                f.writelines("  type: sensor"+ "\n")
-                f.writelines("  datatype: float"+ "\n")
-                f.writelines("  dbc:"+ "\n")
-                f.writelines("    message: " + corpus_can_messages[idx].name+ "\n")
-                f.writelines("    signal: " + corpus_can_signals[idx].name+ "\n")
-                f.writelines("    metadata:"+ "\n")
-                f.writelines("      matching:"+ "\n")
-                f.writelines("        score: {:.4f}".format(score)+ "\n")
+            
+            # The text-based matching must now be validated with
+            # hard facts, such as matching data types, units
+            # and minimum/maximum values
+            this_vss_node = vss_node
+            this_can_message = corpus_can_messages[idx]
+            this_can_signal = corpus_can_signals[idx]
+            
+            unit_match = units_match(this_vss_node, this_can_message, this_can_signal)
+            if unit_match:
+                vss_node.extended_attributes['dbc'] = {
+                    "message": corpus_can_messages[idx].name,
+                    "signal": corpus_can_signals[idx].name,
+                    "metadata": {
+                        "score": "{:.4f}".format(score),
+                        "unit_match": unit_match
+                    }
+                }
+                break
 
-    f.close()
-
-
-
-def correlate_vss_dbc(data_base: Database,
-                      tree: VSSNode,
-                      data_type_tree: VSSNode):
-    """Iterate over complete DBC and VSS tree and check for correlation"""
-
-    # A list of Similarity objects
-    threshold = 0.3
-    matches = defaultdict(set)
-    for vss_signal in PreOrderIter(tree):
-        for can_message in data_base.messages[:10]:
-            for can_signal in can_message.signals[:10]:
-                similar = Similarity(can_message, can_signal, vss_signal)
-                if (similar.total_similarity() > threshold):
-                    # logging.info("Found match for: %s %f", vss_signal.qualified_name(), similar.total_similarity())
-                    matches[vss_signal].add(similar)
-        okay_matches = sorted(
-            matches[vss_signal], key=lambda x: x.total_similarity())[:1]
-        if okay_matches:
-            logging.info(
-                "========================================================")
-            logging.info("%s", vss_signal.qualified_name())
-            for okay_match in okay_matches:
-                logging.info(" Match: %s.%s %f",
-                             okay_match.can_message.name,
-                             okay_match.can_signal.name,
-                             okay_match.total_similarity())
-                dump_similarity(okay_match)
-
-    # logging.info("Number of VSS signals with matches above threshold: %d", len(matches))
-    # logging.info("Printing Top-10")
-    # top10 = sorted(matches, reverse=True)[:10]
-    # for element in top10:
-    #     logging.info("%s = %f",
-    #                  element.vss_signal.qualified_name(),
-    #                  element.total_similarity())
-    #     logging.info("%s", element.vss_signal.qualified_name())
-    #     logging.info("  datatype: %s", element.vss_signal.datatype.value)
-    #     logging.info("  unit: %s", element.vss_signal.unit)
-    #     logging.info("  dbc:")
-    #     logging.info("    message: %s", element.can_message.name)
-    #     logging.info("    signal: %s", element.can_signal.name)
-    #     logging.info("  dbc_meta:")
-    #     logging.info("    vss_description: %s", element.vss_signal.description)
-    #     logging.info("    can_message_comment: %s", element.can_message.comment)
-    #     logging.info("    can_signal_comment: %s", element.can_signal.comment)
-    #     logging.info("    similarity: %f", element.total_similarity())
+    # Write annotated VSS tree to yaml file
+    yaml_content: Dict[str, Any] = {}
+    export_node(yaml_content, tree)
+    with open(output_vspec_file, "w", encoding="UTF-8") as output_file:
+        yaml.dump(yaml_content, output_file, default_flow_style=False, Dumper=NoAliasDumper,
+                  sort_keys=True, width=1024, indent=2, encoding='utf-8', allow_unicode=True)
 
 
-def dump_similarity(similarity: Similarity):
-    """Logs a comparison of the CAN and VSS items"""
-    can_message = similarity.can_message
-    can_signal = similarity.can_signal
-    vss_signal = similarity.vss_signal
+def units_match(this_vss_node: VSSNode,
+                this_can_message: Message,
+                this_can_signal: Signal) -> str:
+    """Validate a DBC-VSS match by their datatypes and units compatibility"""
 
-    logging.info("Comparing CAN %s.%s with VSS %s results in %f", can_message.name,
-                 can_signal.name, vss_signal.qualified_name(), similarity.total_similarity())
-    logging.info("%-10s: %-30s %-50s", 'Domain', 'DBC', 'VSS')
+    if (this_vss_node.unit != None and this_can_signal.unit != None) and (this_vss_node.unit == this_can_signal.unit):
+        return "exact-match"
 
-    logging.info("%-10s: %-30s %-50s %f", 'Parent',
-                 can_message.name,
-                 vss_signal.parent.qualified_name(),
-                 similarity.similarity_parent_name)
+    # This is actually the same ... both means Acceleration
+    if this_vss_node.unit == 'm/s^2' and this_can_signal.unit == 'm/s/s':
+        return "alias-match"
+    
+    # Rotation rate / pitch / yaw. Could potentially be a match
+    if this_vss_node.unit == 'degrees' and this_can_signal.unit == 'deg':
+        return "alias-match"
+    if this_vss_node.unit == 'degrees/s' and this_can_signal.unit == 'rad/s':
+        return "alias-match"
+    
+    if not this_vss_node.unit and this_can_signal.unit:
+        return None
 
-    logging.info("%-10s: %-30s %-50s %f", 'Signal Name',
-                 can_signal.name,
-                 vss_signal.name,
-                 similarity.similarity_signal_name)
+    # Databroker Types: string, bool, int8, int16, int32, int64, uint8, uint16, uint32, uint64, float, double, timestamp
+    vss_datatype = this_vss_node.data_type_str
+    if not vss_datatype:
+        if this_vss_node.has_datatype():
+            vss_datatype = this_vss_node.get_datatype()
 
-    logging.info("%-10s: %-30s %-50s %f", 'Unit',
-                 can_signal.unit,
-                 vss_signal.unit,
-                 similarity.similarity_unit)
+    if this_can_signal.is_float:
+        if vss_datatype == 'float':
+            return "float-match"
+        if vss_datatype == 'double':
+            return "double-match"
 
-    logging.info("%-10s: %-30s %-50s %f", 'Min/max',
-                 str(can_signal.minimum) + '/' + str(can_signal.maximum),
-                 str(vss_signal.min) + '/' + str(vss_signal.max),
-                 similarity.similarity_minmax_values)
+    if this_can_signal.is_signed:
+        if vss_datatype.startswith('int'):
+            return "int-match"
 
-    logging.info("Comments / Descriptions:")
-    logging.info(" DBC Comment: %s", can_signal.comment)
-    logging.info(" VSS Description: %s", vss_signal.description)
-    logging.info(" Similarity: %f", similarity.similarity_signal_description)
-    logging.info(" Parent DBC: %s", can_message.comment)
-    logging.info(" Parent VSS: %s", vss_signal.parent.description)
-    logging.info(" Parent Similarity: %f",
-                 similarity.similarity_parent_description)
-    logging.info("Total Similarity: %f", similarity.total_similarity())
+    if not this_can_signal.is_signed:
+        if vss_datatype.startswith('uint'):
+            return "uint-match"
 
+    if vss_datatype == 'float' and not this_can_signal.is_float:
+        return None
+    
 
-def print_dummy_dbc(data_base: Database,
-                    message_name,
-                    signal_name):
-    """Prints info about a CAN signal"""
+    if this_can_signal.choices:
+        if this_vss_node.allowed:
+            return None
 
-    # message_name = 'ACC1'
-    can_message = data_base.get_message_by_name(message_name)
-    logging.info("CAN Message Frame ID: %s (decimal)", can_message.frame_id)
-    logging.info("CAN Message Name: %s", can_message.name)
-    logging.info("CAN Message Comment: %s", can_message.comment)
+    # Try matching the units first
+    if not this_vss_node.unit and not this_can_signal.unit:
+        return "no-units"
+    
+    # TODO: Trying to figure out enum mapping is too complicated for now
+    # Hence, returning false.    
+    # if this_can_signal.choices:
+    #     if this_vss_node.has_unit:
+    #         return False
+    #     # Both could be ENUMs
+    #     if this_vss_node.allowed:
+    #         return True
+    # this_vss_node.get_datatype()
+    # this_can_signal.is_signed
+    # this_can_signal.is_float
+    # pprint(this_vss_node, depth=1)
+    # print(repr(this_can_signal))
+    # error_message = f"No datatype match found for combination: VSS:{vss_datatype} and DBC is_float:{this_can_signal.is_float} is_signed:{this_can_signal.is_signed} scale:{this_can_signal.scale}"
+    return None
 
-    # signal_name = 'AdaptiveCruiseCtrlSetSpeed
-    can_signal = can_message.get_signal_by_name(signal_name)
-    logging.info("CAN Signal Name: %s", can_signal.name)
-    logging.info("CAN Signal Comment: %s", can_signal.comment)
-    logging.info("CAN Signal Unit: %s", can_signal.unit)
-    logging.info("CAN Signal Minimum: %s", can_signal.minimum)
-    logging.info("CAN Signal Maximum: %s", can_signal.maximum)
-    logging.info("CAN Signal J1939 SPN: %s", can_signal.spn)
+def export_node(yaml_dict, node: VSSNode):
 
-    pprint(vars(can_signal))
+    node_path = node.qualified_name()
 
-    # ACC1.AdaptiveCruiseCtrlSetSpeed [km/h] 0-250
-    # Text: "Value of the desired (chosen) velocity of the adaptive cruise control system."
-    #
-    # VSS Branch: Vehicle.ADAS.CruiseControl.SpeedSet
-    # Text: "Set cruise control speed in kilometers per hour."
+    yaml_dict[node_path] = {}
 
+    yaml_dict[node_path]["type"] = str(node.type.value)
+
+    if node.is_signal() or node.is_property():
+        yaml_dict[node_path]["datatype"] = node.get_datatype()
+
+    # many optional attributes are initilized to "" in vsstree.py
+    if node.min != "":
+        yaml_dict[node_path]["min"] = node.min
+    if node.max != "":
+        yaml_dict[node_path]["max"] = node.max
+    if node.allowed != "":
+        yaml_dict[node_path]["allowed"] = node.allowed
+    if node.default != "":
+        yaml_dict[node_path]["default"] = node.default
+    if node.deprecation != "":
+        yaml_dict[node_path]["deprecation"] = node.deprecation
+
+    # in case of unit or aggregate, the attribute will be missing
+    try:
+        yaml_dict[node_path]["unit"] = str(node.unit.value)
+    except AttributeError:
+        pass
+    try:
+        yaml_dict[node_path]["aggregate"] = node.aggregate
+    except AttributeError:
+        pass
+
+    yaml_dict[node_path]["description"] = node.description
+
+    if node.comment != "":
+        yaml_dict[node_path]["comment"] = node.comment
+
+    for k, v in node.extended_attributes.items():
+        yaml_dict[node_path][k] = v
+
+    for child in node.children:
+        export_node(yaml_dict, child)
+
+# create dumper to remove aliases from output and to add nice new line after each object for a better readability
+class NoAliasDumper(yaml.SafeDumper):
+    def ignore_aliases(self, data):
+        return True
+
+    def write_line_break(self, data=None):
+        super().write_line_break(data)
+        if len(self.indents) == 1:
+            super().write_line_break()
 
 def load_dbc(dbcfile) -> Database:
     """Load a CAN-Bus Database"""
     data_base = cantools.database.load_file(dbcfile)
     return data_base
-
 
 def process_data_type_tree(args,
                            include_dirs,
@@ -511,10 +410,6 @@ def main(arguments):
 
         logging.info("Loading DBC...")
         dbc = load_dbc(args.dbc_file)
-
-        #print_dummy_dbc(dbc, 'ACC1', 'AdaptiveCruiseCtrlSetSpeed')
-
-        # correlate_vss_dbc(dbc, tree, data_type_tree)
 
         semantic_similarity(dbc, tree, args.output_vspec_file)
 
